@@ -198,6 +198,7 @@ p {
   display: none;
   width: 50px;
   padding: 2px;
+  cursor: pointer;
   transition: ease 0.2s;
 }
 
