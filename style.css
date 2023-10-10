@@ -22,6 +22,9 @@ p {
   font-size: 18px;
 }
 
+a {
+  text-decoration: none;
+}
 /* carousel / card slider */
 .carousel {
   position: relative;
@@ -157,6 +160,7 @@ p {
   transition: ease-out 0.1s;
   cursor: pointer;
   height: 40px;
+  text-decoration: none;
 }
 
 .btn-primary:hover {
@@ -176,6 +180,7 @@ p {
   transition: ease-out 0.1s;
   cursor: pointer;
   height: 40px;
+  text-decoration: none;
 }
 .btn-secondary:hover {
   color: white;
@@ -188,6 +193,9 @@ p {
 
 .btn-primary,
 .btn-secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 120px;
   border: none;
   border-radius: 6px;
