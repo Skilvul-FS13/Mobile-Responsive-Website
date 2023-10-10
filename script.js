@@ -166,7 +166,7 @@ function checkboxIsChecked() {
 }
 
 function validateFormData(formData) {
-  if (formData.name !== '' && formData.city !== '' && formData.email !== '' && isNumber(formData.zipCode) && checkboxIsChecked(formData)) {
+  if (formData.name !== '' && formData.city !== '' && formData.email !== '' && isNumber(formData.zipCode) && checkboxIsChecked()) {
     console.log('form terisi');
     return true;
   } else {
@@ -186,4 +186,10 @@ function submit(e) {
   } else {
     warning.textContent = '';
   }
+}
+
+const auth = localStorage.getItem('isLoggedIn');
+if (!auth) {
+  window.location.replace('login.html');
+  document.body.innerHTML = '';
 }
