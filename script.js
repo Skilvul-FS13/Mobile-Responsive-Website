@@ -35,6 +35,27 @@ dropdownSidebar.addEventListener('click', () => {
   dropdownSidebarList.classList.toggle('active');
 });
 
+// navbar dynamic
+const navbarButtonLogin = document.querySelector('.nav-button-login');
+const auth = localStorage.getItem('isLoggedIn');
+
+if (auth) {
+  navbarButtonLogin.innerHTML = buttonLogOut();
+}
+
+function buttonLogOut() {
+  return `<a class="btn-primary" id="logout">Log Out</a>`;
+}
+
+const setLogOut = document.getElementById('logout');
+
+if (setLogOut) {
+  setLogOut.addEventListener('click', () => {
+    localStorage.removeItem('isLoggedIn');
+    window.location.replace('/');
+  });
+}
+
 // sponsored carousel
 const arrowButton = document.querySelectorAll('.carousel #left,#right');
 const sponsored = document.querySelector('.sponsor-list');
@@ -186,10 +207,4 @@ function submit(e) {
   } else {
     warning.textContent = '';
   }
-}
-
-const auth = localStorage.getItem('isLoggedIn');
-if (!auth) {
-  window.location.replace('login.html');
-  document.body.innerHTML = '';
 }
