@@ -203,6 +203,17 @@ a {
   font-size: 1rem;
 }
 
+.login-button {
+  display: flex;
+  gap: 20px;
+}
+.login-button .btn-primary {
+  height: 50px;
+}
+.login-button .btn-secondary {
+  height: 50px;
+}
+
 /* sidebar */
 .nav-burger {
   display: none;
