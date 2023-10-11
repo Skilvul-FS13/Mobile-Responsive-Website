@@ -1,0 +1,30 @@
+:root {
+  --cardbackgroundcolor: #f2f2f2;
+}
+
+/*=============================================
+=            post section                     =
+=============================================*/
+.post-user {
+  padding: 20px;
+  background: var(--cardbackgroundcolor);
+  border-radius: 12px;
+}
+
+.post-input {
+  resize: none;
+  border: none;
+  background: var(--cardbackgroundcolor);
+}
+
+.community {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 380px) {
+  #post-label {
+    font-size: 0.7rem;
+  }
+}
+/*=====  End of post section          ======*/
