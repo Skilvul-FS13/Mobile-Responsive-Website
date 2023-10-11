@@ -38,7 +38,7 @@ a {
   display: flex;
   align-items: center;
   gap: 30px;
-  padding: var(--5, 20px) 47px;
+  padding: var(--5, 20px);
   position: fixed;
   box-sizing: border-box;
   z-index: 2;
@@ -199,6 +199,8 @@ a {
   width: 120px;
   border: none;
   border-radius: 6px;
+  font-weight: 400;
+  font-size: 1rem;
 }
 
 /* sidebar */
@@ -223,7 +225,7 @@ a {
   z-index: 1;
   top: 80px;
   right: -80%;
-  /* display: none; */
+  display: none;
   transition: right 0.5s ease;
   border-radius: 12px 0 12px 0;
 }
@@ -255,7 +257,7 @@ a {
   display: none;
 }
 .overlay.active {
-  display: block;
+  display: none;
 }
 .dropdown-sidebar {
   position: relative;
@@ -764,6 +766,16 @@ main {
   }
   .nav-burger {
     display: block;
+  }
+  .sidebar {
+    display: flex;
+  }
+  .overlay.active {
+    display: block;
+  }
+  .dropdown,
+  .dropdown.show-dropdown {
+    display: none;
   }
 }
 @media screen and (max-width: 700px) {
