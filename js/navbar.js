@@ -31,6 +31,12 @@ burgerButton.addEventListener('click', () => {
   overlay.classList.toggle('active');
 });
 
+overlay.addEventListener('click', () => {
+  burgerButton.classList.toggle('active');
+  sidebar.classList.toggle('active');
+  overlay.classList.toggle('active');
+});
+
 dropdownSidebar.addEventListener('click', () => {
   dropdownSidebarList.classList.toggle('active');
 });
@@ -38,20 +44,24 @@ dropdownSidebar.addEventListener('click', () => {
 // navbar dynamic
 const navbarButtonLogin = document.querySelector('.nav-button-login');
 const auth = localStorage.getItem('isLoggedIn');
+const sidebarButtonLogin = document.querySelector('.login-sidebar');
 
 if (auth) {
   navbarButtonLogin.innerHTML = buttonLogOut();
+  sidebarButtonLogin.innerHTML = buttonLogOut();
 }
 
 function buttonLogOut() {
   return `<a class="btn-primary" id="logout">Log Out</a>`;
 }
 
-const setLogOut = document.getElementById('logout');
+const setLogOut = document.querySelectorAll('#logout');
 
 if (setLogOut) {
-  setLogOut.addEventListener('click', () => {
-    localStorage.removeItem('isLoggedIn');
-    window.location.replace('/');
+  setLogOut.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      localStorage.removeItem('isLoggedIn');
+      window.location.replace('/');
+    });
   });
 }
