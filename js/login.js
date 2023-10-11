@@ -29,14 +29,14 @@ window.addEventListener('load', () => {
       const passwordInput = password.value;
 
       // account from localStorage
-      const accountKey = 'ACCOUNT_KEY';
-      const localAccount = JSON.parse(localStorage.getItem(accountKey));
+      // const accountKey = 'ACCOUNT_KEY';
+      // const localAccount = JSON.parse(localStorage.getItem(accountKey));
 
-      const localUser = localAccount.find((localUser) => localUser.username === usernameInput && localUser.password === passwordInput);
+      // const localUser = localAccount.find((localUser) => localUser.username === usernameInput && localUser.password === passwordInput);
       const user = users.find((user) => user.username === usernameInput && user.password === passwordInput);
 
       // account from mockAPI
-      if (user || localUser) {
+      if (user) {
         localStorage.setItem('isLoggedIn', 'true');
         window.location.href = 'index.html';
       } else {
