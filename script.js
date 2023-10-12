@@ -62,6 +62,7 @@ if (setLogOut) {
   setLogOut.forEach((btn) => {
     btn.addEventListener('click', () => {
       localStorage.removeItem('isLoggedIn');
+      localStorage.removeItem('USER_LOGGED_IN');
       window.location.replace('/');
     });
   });
