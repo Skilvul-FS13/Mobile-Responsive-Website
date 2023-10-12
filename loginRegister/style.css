@@ -7,16 +7,11 @@
     font-family: 'Poppins', sans-serif;
 }
 
+
 .img-fill {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-label {
-    font-size: .9em;
-    font-weight: 500;
-    color: #222;
 }
 
 ::placeholder {
@@ -32,17 +27,22 @@ label {
 }
 
 .separator-line {
-
     width: 200px;
     height: 5px;
     border-radius: 5px;
     background: #7a7a7a;
-    margin: 10px 0;
+    /* margin: 10px 0; */
 }
 
 .button .btn {
     margin-block: 10px;
-    padding: 10px 30px;
+    padding: 6px 50px;
+}
+
+h3 {
+    font-size: .8em;
+    font-weight: 500;
+    margin-block: 10px;
 }
 
 .error-message {
