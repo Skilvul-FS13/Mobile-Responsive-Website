@@ -22,9 +22,36 @@
   margin-bottom: 50px;
 }
 
+#username {
+  font-size: 1.2rem;
+}
+#date {
+  font-size: 0.7rem;
+}
+#content {
+  font-size: 0.9rem;
+}
+
 @media screen and (max-width: 380px) {
   #post-label {
     font-size: 0.7rem;
   }
 }
 /*=====  End of post section          ======*/
+
+/*=============================================
+=            post list section                =
+=============================================*/
+
+.post-box {
+  background-color: var(--cardbackgroundcolor);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+button[role='button'] {
+  width: max-content;
+  height: max-content;
+}
+
+/*=====  End of post list section      ======*/
