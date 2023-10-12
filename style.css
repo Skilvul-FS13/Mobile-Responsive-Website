@@ -41,7 +41,7 @@ a {
   padding: var(--5, 20px);
   position: fixed;
   box-sizing: border-box;
-  z-index: 2;
+  z-index: 4;
 }
 
 .navbar-shadow {
@@ -235,7 +235,7 @@ a {
   height: 93vh;
   width: 80%;
   background-color: white;
-  z-index: 1;
+  z-index: 3;
   top: 80px;
   right: -80%;
   display: none;
