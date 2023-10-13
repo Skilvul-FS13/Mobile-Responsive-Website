@@ -38,6 +38,8 @@ window.addEventListener('load', () => {
       // account from mockAPI
       if (user) {
         localStorage.setItem('isLoggedIn', 'true');
+        localStorage.setItem('USER_LOGGED_IN', JSON.stringify(user));
+
         window.location.href = 'index.html';
       } else {
         error.innerHTML = `<div>invalid username or password</div>`;
