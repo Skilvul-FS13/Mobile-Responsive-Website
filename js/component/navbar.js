@@ -47,37 +47,37 @@ const aboutUsLink = document.getElementById("aboutus");
 const informationLink = document.getElementById("information");
 const quizLink = document.getElementById("quiz");
 const communityLink = document.getElementById("community");
+
 // Ambil elemen-elemen tombol login dan register
 const loginButton = document.getElementById("login");
 const registerButton = document.getElementById("register");
 
 // Tambahkan event listener untuk mengarahkan ke halaman yang sesuai
 homeLink.addEventListener("click", function () {
-  window.location.href = "index.html";
+  window.location.href = "/";
 });
 
 aboutUsLink.addEventListener("click", function () {
-  window.location.href = "aboutus.html";
+  window.location.href = "/aboutus.html";
 });
 
-informationLink.addEventListener("click", function () {
-  // Contoh jika Anda ingin menghandle navigasi dengan JavaScript
-  // Di sini Anda bisa menambahkan logika kustom
-  console.log("Tautan Informasi diklik");
-});
+// informationLink.addEventListener("click", function () {
+
+//   alert("Tautan Informasi diklik");
+// });
 
 quizLink.addEventListener("click", function () {
-  window.location.href = "quiz.html";
+  window.location.href = "/quiz.html";
 });
 
 communityLink.addEventListener("click", function () {
-  window.location.href = "views/community.html";
+  window.location.href = "/views/community.html";
 });
 
 
 loginButton.addEventListener("click", function () {
-  window.location.href = "Auth/login.html";
+  window.location.href = "/Auth/login.html";
 });
 registerButton.addEventListener("click", function () {
-  window.location.href = "Auth/register.html";
+  window.location.href = "/Auth/register.html";
 });
