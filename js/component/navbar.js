@@ -58,7 +58,7 @@ homeLink.addEventListener("click", function () {
 });
 
 aboutUsLink.addEventListener("click", function () {
-  window.location.href = "/aboutus.html";
+  window.location.href = "/views/aboutus.html";
 });
 
 // informationLink.addEventListener("click", function () {
