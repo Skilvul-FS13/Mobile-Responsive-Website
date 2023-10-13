@@ -85,19 +85,33 @@
       </aside>
       <!-- end of start sidebar -->
 
-      <!-- start community section -->
-      <section class="community d-flex flex-column gap-5">
-        <div class="container d-flex flex-column">
-          <img src="../img/" alt="" />
+      <!-- start profile section -->
+      <section class="profile d-flex flex-column gap-5 mb-5">
+        <div class="container d-flex flex-column profile-banner">
+          <img class="object-fit-cover rounded-bottom-2" src="https://source.unsplash.com/1200x720?laptop" alt="" height="300" loading="lazy" />
         </div>
 
-        <article class="container post-list">
-          <div class="post-box d-flex gap-2 align-items-start">
+        <div class="container mt-0 pt-0 ps-5 pe-4">
+          <div class="position-relative profile-avatar">
+            <img class="position-absolute rounded-pill" src="../img/logo3.png" alt="avatar" width="100" height="100" />
+          </div>
+          <div class="profile-detail pt-3">
+            <h4 class="p-0 m-0" id="displayName">John Doe</h4>
+            <h5 class="text-body-secondary fw-lighter" id="username">@John_Doe</h5>
+            <p>
+              Seorang peminat kebersihan bumi yang penuh semangat, selalu siap untuk berkontribusi dalam menjaga lingkungan kita yang indah. Saya percaya bahwa dengan tindakan sederhana sehari-hari, kita dapat membuat perbedaan besar dalam
+              menjaga keberlanjutan planet ini. Mari bersama-sama bergerak menuju masa depan yang lebih bersih dan hijau!
+            </p>
+          </div>
+        </div>
+
+        <article class="profile post-list container">
+          <div class="post-box d-flex gap-2 align-items-start rounded-2">
             <div class="avatar">
               <img class="rounded-5" src="../img/logo3.png" alt="avatar" width="50" height="50" />
             </div>
             <div class="post-content">
-              <h4 class="p-0 m-0" id="username">username</h4>
+              <h4 class="p-0 m-0" id="displayName">username</h4>
               <p class="text-body-secondary fw-semibold" id="date">12 Oktober 2023, 9:09</p>
               <p class="content" id="content">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto dolore sunt nemo voluptas ducimus mollitia nesciunt eius alias, obcaecati autem quas fugiat ad aspernatur dolorem optio aut adipisci fugit laborum, cumque
@@ -148,7 +162,7 @@
           </div>
         </article>
       </section>
-      <!-- end community section -->
+      <!-- end profile section -->
     </main>
     <!-- end of main content -->
     <footer>
