@@ -1,4 +1,4 @@
-const navbar = document.createElement('header');
+const navbar = document.querySelector('header');
 navbar.innerHTML = `
     <div class="navbar-container">
         <div class="link-navbar">
@@ -38,8 +38,6 @@ navbar.innerHTML = `
         </div>
     </div>
 `;
-
-document.body.appendChild(navbar);
 
 // Ambil elemen-elemen tautan navbar
 const homeLink = document.getElementById('home');
@@ -102,8 +100,11 @@ navInformation.addEventListener('click', () => {
 
 // sidebar mobile
 const sidebar = document.querySelector('.sidebar');
+console.log('🚀 ~ file: navbar.js:105 ~ sidebar:', sidebar);
 const burgerButton = document.querySelector('.nav-burger');
+console.log('🚀 ~ file: navbar.js:106 ~ burgerButton:', burgerButton);
 const overlay = document.querySelector('.overlay');
+console.log('🚀 ~ file: navbar.js:108 ~ overlay:', overlay);
 const dropdownSidebar = document.querySelector('.dropdown-sidebar #information');
 const dropdownSidebarList = document.querySelector('.dropdown-sidebar-list');
 
