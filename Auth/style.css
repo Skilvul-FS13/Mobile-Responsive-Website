@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Open+Sans&family=Poppins:wght@300;500&family=Raleway:wght@500;700&family=Ubuntu:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.img-fill {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+::placeholder {
+    font-size: 14px;
+}
+
+.separator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-block: 25px;
+}
+
+.separator-line {
+    width: 200px;
+    height: 5px;
+    border-radius: 5px;
+    background: #7a7a7a;
+    /* margin: 10px 0; */
+}
+
+.button .btn {
+    margin-block: 10px;
+    padding: 6px 50px;
+}
+
+h3 {
+    font-size: .8em;
+    font-weight: 500;
+    margin-block: 10px;
+}
+
+.error-message {
+    position: absolute;
+    color: red;
+    font-size: .8em;
+    font-weight: 500;
+}
