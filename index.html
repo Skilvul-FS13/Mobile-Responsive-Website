@@ -1,218 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Green World Aware | Home</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Green World Aware | Home</title>
-  <link rel="stylesheet" href="css/main.css" />
-</head>
+  <body>
+    <!-- start navbar -->
+    <script src="js/component/navbar.js"></script>
 
-<body>
-  <!-- start navbar -->
-  <script src="js/component/navbar.js"></script>
+    <!-- end of navbar -->
+    <div class="overlay"></div>
 
-  <!-- end of navbar -->
-  <div class="overlay"></div>
+    <!-- start main content -->
+    <main>
+      <!-- start sidebar -->
+      <aside>
+        <div class="sidebar">
+          <div class="sidebar-link">
+            <a class="nav-button active" id="home" href="#">Beranda</a>
+            <a class="nav-button" id="aboutus" href="#">Tentang Kami</a>
+            <div class="dropdown-sidebar">
+              <a class="nav-button" id="information" href="javascript:void(0);"
+                >Informasi
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="14" height="14" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                </svg>
+              </a>
+              <div class="dropdown-sidebar-list">
+                <a href="javascript:void(0)">Berita</a>
+                <a href="javascript:void(0)">Dampak</a>
+                <a href="javascript:void(0)">Solusi</a>
+                <a href="javascript:void(0)">Video</a>
+              </div>
+            </div>
 
-  <!-- start main content -->
-  <main>
-    <!-- start sidebar -->
-    <aside>
-      <div class="sidebar">
-        <div class="sidebar-link">
-          <a class="nav-button active" id="home" href="#">Beranda</a>
-          <a class="nav-button" id="aboutus" href="#">Tentang Kami</a>
-          <div class="dropdown-sidebar">
-            <a class="nav-button" id="information" href="javascript:void(0);">Informasi
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="14" height="14" viewBox="0 0 24 24"
-                stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-              </svg>
-            </a>
-            <div class="dropdown-sidebar-list">
-              <a href="javascript:void(0)">Berita</a>
-              <a href="javascript:void(0)">Dampak</a>
-              <a href="javascript:void(0)">Solusi</a>
-              <a href="javascript:void(0)">Video</a>
+            <a class="nav-button" id="quiz" href="#">Kuis</a>
+            <a class="nav-button" id="community" href="./pages/community.html">Komunitas</a>
+            <div class="login-sidebar">
+              <a href="register.html" class="btn-primary" id="register">Daftar</a>
+              <a href="login.html" class="btn-secondary" id="login">Masuk</a>
             </div>
           </div>
-
-          <a class="nav-button" id="quiz" href="#">Kuis</a>
-          <a class="nav-button" id="community" href="./pages/community.html">Komunitas</a>
-          <div class="login-sidebar">
-            <a href="register.html" class="btn-primary" id="register">Daftar</a>
-            <a href="login.html" class="btn-secondary" id="login">Masuk</a>
-          </div>
         </div>
-      </div>
-    </aside>
-    <!-- end of start sidebar -->
+      </aside>
+      <!-- end of start sidebar -->
 
-    <!-- hero section -->
-    <section class="hero-container">
-      <svg xmlns="http://www.w3.org/2000/svg" width="887" height="742" viewBox="0 0 887 742" fill="none">
-        <path
-          d="M250.5 451.5C250.501 269.482 -51.2914 207.628 8.5001 0L886.632 -4.90294e-09L886.629 742L492.5 742C400.931 742 250.5 633.518 250.5 451.5Z"
-          fill="#11BB60" />
-      </svg>
-      <div class="hero">
-        <div class="text-hero">
-          <h1 class="paragraph">CIPTAKAN <span>LINGKUNGAN</span> BERSIH UNTUK LINGKUNGAN <span>SEHAT</span>
-            BERKELANJUTAN.</h1>
-          <p>GreenWorldAware adalah website untuk anda yang sadar lingkungan, memberikan informasi, tips, dan wadah
-            untuk membantu anda membuat kontribusi kebersihan demi bumi yang lebih bersih.</p>
-          <button class="btn-primary" id="register">Daftar</button>
-        </div>
-
-        <div class="picture-hero">
-          <img src="./img/hero-picture.png" alt="" />
-        </div>
-      </div>
-    </section>
-    <!-- end of hero -->
-
-    <!-- sponsor section -->
-    <section class="sponsor-container">
-      <div class="carousel">
-        <svg id="left" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-          stroke="currentColor" class="w-6 h-6">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+      <!-- hero section -->
+      <section class="hero-container">
+        <svg xmlns="http://www.w3.org/2000/svg" width="887" height="742" viewBox="0 0 887 742" fill="none">
+          <path d="M250.5 451.5C250.501 269.482 -51.2914 207.628 8.5001 0L886.632 -4.90294e-09L886.629 742L492.5 742C400.931 742 250.5 633.518 250.5 451.5Z" fill="#11BB60" />
         </svg>
-        <div class="sponsor-list">
-          <div class="sponsor">
-            <img src="./img/rexellogo.png" alt="" />
+        <div class="hero">
+          <div class="text-hero">
+            <h1 class="paragraph">CIPTAKAN <span>LINGKUNGAN</span> BERSIH UNTUK LINGKUNGAN <span>SEHAT</span> BERKELANJUTAN.</h1>
+            <p>GreenWorldAware adalah website untuk anda yang sadar lingkungan, memberikan informasi, tips, dan wadah untuk membantu anda membuat kontribusi kebersihan demi bumi yang lebih bersih.</p>
+            <button class="btn-primary" id="register">Daftar</button>
           </div>
-          <div class="sponsor">
-            <img src="./img/greenpeace.png" alt="" />
-          </div>
-          <div class="sponsor">
-            <img src="./img/unilever.png" alt="" />
-          </div>
-          <div class="sponsor">
-            <img src="./img/aiden.png" alt="" />
-          </div>
-          <div class="sponsor">
-            <img src="./img/bbc.png" alt="" />
+
+          <div class="picture-hero">
+            <img src="./img/hero-picture.png" alt="" />
           </div>
         </div>
-        <svg id="right" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-          stroke="currentColor" class="w-6 h-6">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-        </svg>
-      </div>
-    </section>
-    <!-- end of sponsor -->
+      </section>
+      <!-- end of hero -->
 
-    <!-- start cta cause section -->
-    <section class="information-container">
-      <div class="text-information">
-        <div class="headline-content">
-          <h2>Mengapa Kita Harus Menjaga Kebersihan</h2>
-          <p>Mencegah pencemaran limbah adalah keharusan. Ini melindungi ekosistem, memastikan udara dan air bersih, dan
-            mendukung kehidupan yang berkelanjutan.</p>
-        </div>
-      </div>
-
-      <div class="information-content">
-        <div class="information-picture">
-          <svg xmlns="http://www.w3.org/2000/svg" width="483" height="507" viewBox="0 0 483 507" fill="none">
-            <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M232.857 0.647675C301.609 -3.44324 338.072 78.3975 383.873 129.813C425.421 176.455 490.009 218.777 482.381 280.762C474.905 341.509 396.362 357.764 350.789 398.642C309.897 435.32 287.088 495.765 232.857 504.574C173.199 514.265 112.656 486.334 69.1598 444.387C24.9191 401.722 -5.31195 341.907 0.779976 280.762C6.48258 223.524 62.1068 191.076 98.811 146.775C142.649 93.8629 164.248 4.7301 232.857 0.647675Z"
-              fill="#11BB60" />
+      <!-- sponsor section -->
+      <section class="sponsor-container">
+        <div class="carousel">
+          <svg id="left" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
           </svg>
-          <img src="./img/cause-picture.png" alt="" />
-        </div>
-        <div class="information-cta">
-          <h2>Memahami Dampak Polusi Limbah</h2>
-          <p>Kesadaran tentang dampak polusi lingkungan memungkinkan kita untuk membuat pilihan yang mendukung perubahan
-            positif.</p>
-          <button class="btn-primary" id="dampak">Dampak</button>
-        </div>
-      </div>
-
-      <div class="information-content solution">
-        <div class="information-picture">
-          <svg xmlns="http://www.w3.org/2000/svg" width="446" height="477" viewBox="0 0 446 477" fill="none">
-            <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M232.041 0.0571849C292.386 1.59423 345.644 36.5579 386.094 81.3423C424.352 123.7 440.986 178.361 444.53 235.316C448.372 297.046 447.458 363.325 406.53 409.715C363.735 458.222 296.494 481.862 232.041 476.167C171.906 470.853 127.749 424.869 85.8967 381.384C45.2006 339.101 3.26517 293.909 0.228774 235.316C-2.93413 174.282 27.0244 116.833 69.9305 73.2894C113.187 29.3901 170.415 -1.51248 232.041 0.0571849Z"
-              fill="#11BB60" />
+          <div class="sponsor-list">
+            <div class="sponsor">
+              <img src="./svg/rexel.svg" alt="" />
+            </div>
+            <div class="sponsor">
+              <img src="./svg/greenpeace.svg" alt="" />
+            </div>
+            <div class="sponsor">
+              <img src="./svg/unilever.svg" alt="" />
+            </div>
+            <div class="sponsor">
+              <img src="./svg/aiden.svg" alt="" />
+            </div>
+            <div class="sponsor">
+              <img src="./svg/bbc.svg" alt="" />
+            </div>
+          </div>
+          <svg id="right" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
           </svg>
-          <img src="./img/solution-picture.png" alt="" />
         </div>
-        <div class="information-cta">
-          <h2>Mengubah Polusi Limbah menjadi Solusi Berkelanjutan</h2>
-          <p>Temukan solusi inovatif untuk polusi limbah, gabung dalam gerakan global, dan kurangi dampak buruk
-            pencemaran sampah terhadap lingkungan.</p>
-          <button class="btn-primary" id="dampak">Solusi</button>
-        </div>
-      </div>
-    </section>
-    <!-- end of cta cause section -->
+      </section>
+      <!-- end of sponsor -->
 
-    <!-- start news card -->
-    <section class="news-container">
-      <div class="headline-news">
-        <div class="headline-text">
-          <h3>Berita Terkini</h3>
-        </div>
-        <div class="line"></div>
-        <a href="/">Selengkapnya</a>
-      </div>
-      <div class="carousel">
-        <svg id="left" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-          stroke="currentColor" class="w-6 h-6">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
-        </svg>
-
-        <div class="news-list">
-          <div class="news-card"></div>
+      <!-- start cta cause section -->
+      <section class="information-container">
+        <div class="text-information">
+          <div class="headline-content">
+            <h2>Mengapa Kita Harus Menjaga Kebersihan</h2>
+            <p>Mencegah pencemaran limbah adalah keharusan. Ini melindungi ekosistem, memastikan udara dan air bersih, dan mendukung kehidupan yang berkelanjutan.</p>
+          </div>
         </div>
 
-        <svg id="right" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-          stroke="currentColor" class="w-6 h-6">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-        </svg>
-      </div>
-    </section>
-    <!-- end news card -->
-
-    <!-- start contact us -->
-    <section class="contact-us">
-      <div class="headline-contact">
-        <h2>Kontak Kami</h2>
-      </div>
-      <form id="form">
-        <div class="personal-info">
-          <input type="text" id="name" placeholder="nama" />
-
-          <input type="text" id="city" placeholder="kota" />
+        <div class="information-content">
+          <div class="information-picture">
+            <svg xmlns="http://www.w3.org/2000/svg" width="483" height="507" viewBox="0 0 483 507" fill="none">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M232.857 0.647675C301.609 -3.44324 338.072 78.3975 383.873 129.813C425.421 176.455 490.009 218.777 482.381 280.762C474.905 341.509 396.362 357.764 350.789 398.642C309.897 435.32 287.088 495.765 232.857 504.574C173.199 514.265 112.656 486.334 69.1598 444.387C24.9191 401.722 -5.31195 341.907 0.779976 280.762C6.48258 223.524 62.1068 191.076 98.811 146.775C142.649 93.8629 164.248 4.7301 232.857 0.647675Z"
+                fill="#11BB60"
+              />
+            </svg>
+            <img src="./img/cause-picture.png" alt="" />
+          </div>
+          <div class="information-cta">
+            <h2>Memahami Dampak Polusi Limbah</h2>
+            <p>Kesadaran tentang dampak polusi lingkungan memungkinkan kita untuk membuat pilihan yang mendukung perubahan positif.</p>
+            <button class="btn-primary" id="dampak">Dampak</button>
+          </div>
         </div>
 
-        <input type="email" id="email" placeholder="email" />
-
-        <input type="text" id="zip-code" placeholder="zip-code" />
-
-        <div class="form-check">
-          <label for="" id="check"> Dengan ini saya menyatakan data yang diisi pada form ini adalah benar dan telah
-            sesuai </label>
-          <input type="checkbox" id="status" />
+        <div class="information-content solution">
+          <div class="information-picture">
+            <svg xmlns="http://www.w3.org/2000/svg" width="446" height="477" viewBox="0 0 446 477" fill="none">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M232.041 0.0571849C292.386 1.59423 345.644 36.5579 386.094 81.3423C424.352 123.7 440.986 178.361 444.53 235.316C448.372 297.046 447.458 363.325 406.53 409.715C363.735 458.222 296.494 481.862 232.041 476.167C171.906 470.853 127.749 424.869 85.8967 381.384C45.2006 339.101 3.26517 293.909 0.228774 235.316C-2.93413 174.282 27.0244 116.833 69.9305 73.2894C113.187 29.3901 170.415 -1.51248 232.041 0.0571849Z"
+                fill="#11BB60"
+              />
+            </svg>
+            <img src="./img/solution-picture.png" alt="" />
+          </div>
+          <div class="information-cta">
+            <h2>Mengubah Polusi Limbah menjadi Solusi Berkelanjutan</h2>
+            <p>Temukan solusi inovatif untuk polusi limbah, gabung dalam gerakan global, dan kurangi dampak buruk pencemaran sampah terhadap lingkungan.</p>
+            <button class="btn-primary" id="dampak">Solusi</button>
+          </div>
         </div>
-        <button class="btn-primary" id="submit-form" type="submit">Submit</button>
-        <div id="warning"></div>
-      </form>
-    </section>
-    <!-- end of contact us -->
-  </main>
-  <!-- end of main content -->
-  <!-- footer -->
-  <script src="js/component/footer.js"></script>
+      </section>
+      <!-- end of cta cause section -->
 
+      <!-- start news card -->
+      <section class="news-container">
+        <div class="headline-news">
+          <div class="headline-text">
+            <h3>Berita Terkini</h3>
+          </div>
+          <div class="line"></div>
+          <a href="/">Selengkapnya</a>
+        </div>
+        <div class="carousel">
+          <svg id="left" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+          </svg>
 
-  <script type="module" src="/js/script.js"></script>
-  <script type="module" src="/js/carousel.js"></script>
-  <script type="module" src="/js/index.js"></script>
-  <script type="module" src="/js/formValidation.js"></script>
-</body>
+          <div class="news-list">
+            <div class="news-card"></div>
+          </div>
 
+          <svg id="right" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+          </svg>
+        </div>
+      </section>
+      <!-- end news card -->
+
+      <!-- start contact us -->
+      <section class="contact-us">
+        <div class="headline-contact">
+          <h2>Kontak Kami</h2>
+        </div>
+        <form id="form">
+          <div class="personal-info">
+            <input type="text" id="name" placeholder="nama" />
+
+            <input type="text" id="city" placeholder="kota" />
+          </div>
+
+          <input type="email" id="email" placeholder="email" />
+
+          <input type="text" id="zip-code" placeholder="zip-code" />
+
+          <div class="form-check">
+            <label for="" id="check"> Dengan ini saya menyatakan data yang diisi pada form ini adalah benar dan telah sesuai </label>
+            <input type="checkbox" id="status" />
+          </div>
+          <button class="btn-primary" id="submit-form" type="submit">Submit</button>
+          <div id="warning"></div>
+        </form>
+      </section>
+      <!-- end of contact us -->
+    </main>
+    <!-- end of main content -->
+    <!-- footer -->
+    <script src="js/component/footer.js"></script>
+
+    <script type="module" src="/js/carousel.js"></script>
+    <script type="module" src="/js/index.js"></script>
+    <script type="module" src="/js/formValidation.js"></script>
+  </body>
 </html>
