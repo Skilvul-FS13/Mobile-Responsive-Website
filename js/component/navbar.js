@@ -42,23 +42,23 @@ navbar.innerHTML = `
 document.body.appendChild(navbar);
 
 // Ambil elemen-elemen tautan navbar
-const homeLink = document.getElementById("home");
-const aboutUsLink = document.getElementById("aboutus");
-const informationLink = document.getElementById("information");
-const quizLink = document.getElementById("quiz");
-const communityLink = document.getElementById("community");
+const homeLink = document.getElementById('home');
+const aboutUsLink = document.getElementById('aboutus');
+const informationLink = document.getElementById('information');
+const quizLink = document.getElementById('quiz');
+const communityLink = document.getElementById('community');
 
 // Ambil elemen-elemen tombol login dan register
-const loginButton = document.getElementById("login");
-const registerButton = document.getElementById("register");
+const loginButton = document.getElementById('login');
+const registerButton = document.getElementById('register');
 
 // Tambahkan event listener untuk mengarahkan ke halaman yang sesuai
-homeLink.addEventListener("click", function () {
-  window.location.href = "/";
+homeLink.addEventListener('click', function () {
+  window.location.href = '/';
 });
 
-aboutUsLink.addEventListener("click", function () {
-  window.location.href = "/views/aboutus.html";
+aboutUsLink.addEventListener('click', function () {
+  window.location.href = '/views/aboutus.html';
 });
 
 // informationLink.addEventListener("click", function () {
@@ -66,18 +66,86 @@ aboutUsLink.addEventListener("click", function () {
 //   alert("Tautan Informasi diklik");
 // });
 
-quizLink.addEventListener("click", function () {
-  window.location.href = "/quiz.html";
+quizLink.addEventListener('click', function () {
+  window.location.href = '/quiz.html';
 });
 
-communityLink.addEventListener("click", function () {
-  window.location.href = "/views/community.html";
+communityLink.addEventListener('click', function () {
+  window.location.href = '/views/community.html';
 });
 
+loginButton.addEventListener('click', function () {
+  window.location.href = '/Auth/login.html';
+});
+registerButton.addEventListener('click', function () {
+  window.location.href = '/Auth/register.html';
+});
 
-loginButton.addEventListener("click", function () {
-  window.location.href = "/Auth/login.html";
+const navbarContainer = document.querySelector('.navbar-container');
+// navbar shadow
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 0) {
+    navbarContainer.classList.add('navbar-shadow');
+  } else {
+    navbarContainer.classList.remove('navbar-shadow');
+  }
 });
-registerButton.addEventListener("click", function () {
-  window.location.href = "/Auth/register.html";
+
+// show dropdown
+const navInformation = document.querySelector('#information');
+const dropdown = document.querySelector('.dropdown');
+
+navInformation.addEventListener('click', () => {
+  navInformation.classList.toggle('active');
+  dropdown.classList.toggle('show-dropdown');
 });
+
+// sidebar mobile
+const sidebar = document.querySelector('.sidebar');
+const burgerButton = document.querySelector('.nav-burger');
+const overlay = document.querySelector('.overlay');
+const dropdownSidebar = document.querySelector('.dropdown-sidebar #information');
+const dropdownSidebarList = document.querySelector('.dropdown-sidebar-list');
+
+burgerButton.addEventListener('click', () => {
+  burgerButton.classList.toggle('active');
+  sidebar.classList.toggle('active');
+  overlay.classList.toggle('active');
+});
+
+overlay.addEventListener('click', () => {
+  burgerButton.classList.toggle('active');
+  sidebar.classList.toggle('active');
+  overlay.classList.toggle('active');
+});
+
+dropdownSidebar.addEventListener('click', () => {
+  dropdownSidebarList.classList.toggle('active');
+});
+
+// navbar dynamic
+const auth = localStorage.getItem('isLoggedIn', 'USER_LOGGED_IN');
+const navbarButtonLogin = document.querySelector('.nav-button-login');
+
+const sidebarButtonLogin = document.querySelector('.login-sidebar');
+
+if (auth) {
+  navbarButtonLogin.innerHTML = buttonLogOut();
+  sidebarButtonLogin.innerHTML = buttonLogOut();
+}
+
+function buttonLogOut() {
+  return `<a class="btn-primary" id="logout">Log Out</a>`;
+}
+
+const setLogOut = document.querySelectorAll('#logout');
+
+if (setLogOut) {
+  setLogOut.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      localStorage.removeItem('isLoggedIn');
+      localStorage.removeItem('USER_LOGGED_IN');
+      window.location.replace('/');
+    });
+  });
+}
