@@ -8,7 +8,6 @@
 .post-user {
   padding: 20px;
   background: var(--cardbackgroundcolor);
-  border-radius: 12px;
 }
 
 .post-input {
@@ -46,7 +45,6 @@
 .post-box {
   background-color: var(--cardbackgroundcolor);
   padding: 20px;
-  border-radius: 12px;
 }
 
 button[role='button'] {
@@ -55,3 +53,13 @@ button[role='button'] {
 }
 
 /*=====  End of post list section      ======*/
+
+/*=============================================
+=            profile page                     =
+=============================================*/
+
+.profile-avatar img {
+  top: -100px;
+}
+
+/*=====  End of profile page           ======*/

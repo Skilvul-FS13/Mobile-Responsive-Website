@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Green World Aware | Komunitas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../css/community.css" />
+  </head>
+  <body>
+    <!-- start navbar -->
+    <header class="navbar-container">
+      <div class="link-navbar">
+        <div class="link-container">
+          <div class="logo">
+            <img src="../img/logo3.png" alt="" width="40" height="40" />
+          </div>
+          <nav class="navbar">
+            <a class="nav-button" id="home" href="/">Beranda</a>
+            <a class="nav-button" id="aboutus" href="#">Tentang Kami</a>
+            <a class="nav-button" id="information" href="javascript:void(0);"
+              >Informasi
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="14" height="14" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+              </svg>
+            </a>
+            <a class="nav-button" id="quiz" href="#">Kuis</a>
+            <a class="nav-button active" id="community" href="community.html">Komunitas</a>
+          </nav>
+        </div>
+        <div class="nav-button-login">
+          <a href="../login.html" class="btn-secondary" id="login">Masuk</a>
+          <a href="../register.html" class="btn-primary" id="register">Daftar</a>
+        </div>
+        <div class="nav-burger">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </div>
+      </div>
+      <div class="dropdown">
+        <div class="list-dropdown" style="border-radius: 12px">
+          <a href="javascript:void(0)">Berita</a>
+          <a href="javascript:void(0)">Dampak</a>
+          <a href="javascript:void(0)">Solusi</a>
+          <a href="javascript:void(0)">Video</a>
+        </div>
+      </div>
+    </header>
+    <!-- end of navbar -->
+    <div class="overlay"></div>
+
+    <!-- start main content -->
+    <main>
+      <!-- start sidebar -->
+      <aside>
+        <div class="sidebar">
+          <div class="sidebar-link">
+            <a class="nav-button" id="home" href="#">Beranda</a>
+            <a class="nav-button" id="aboutus" href="#">Tentang Kami</a>
+            <div class="dropdown-sidebar">
+              <a class="nav-button" id="information" href="javascript:void(0);"
+                >Informasi
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="14" height="14" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                </svg>
+              </a>
+              <div class="dropdown-sidebar-list">
+                <a href="javascript:void(0)">Berita</a>
+                <a href="javascript:void(0)">Dampak</a>
+                <a href="javascript:void(0)">Solusi</a>
+                <a href="javascript:void(0)">Video</a>
+              </div>
+            </div>
+
+            <a class="nav-button" id="quiz" href="#">Kuis</a>
+            <a class="nav-button active" id="community" href="community.html">Komunitas</a>
+            <div class="login-sidebar">
+              <a href="../register.html" class="btn-primary" id="register">Daftar</a>
+              <a href="../login.html" class="btn-secondary" id="login">Masuk</a>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <!-- end of start sidebar -->
+
+      <!-- start community section -->
+      <section class="community d-flex flex-column gap-5">
+        <div class="container d-flex flex-column">
+          <div class="post-user container rounded-2">
+            <div class="form-floating">
+              <textarea class="post-input form-control" placeholder="Buat postingan positif" id="floatingTextarea" maxlength="1000"></textarea>
+              <label id="post-label" for="floatingTextarea">Ceritakan kontribusimu pada lingkungan</label>
+            </div>
+            <hr />
+            <div class="post-button d-flex justify-content-end">
+              <button class="btn-primary">Post</button>
+            </div>
+          </div>
+        </div>
+
+        <article class="container post-list"></article>
+      </section>
+      <!-- end community section -->
+    </main>
+    <!-- end of main content -->
+    <footer>
+      <section class="footer-container">
+        <div class="footer-info">
+          <div class="footer-gwa">
+            <img src="../img/logo.png" alt="" />
+            <p>Melalui artikel informatif, tips praktis, dan keterlibatan komunitas, kami bertujuan untuk memberdayakan individu untuk memberikan dampak yang berarti terhadap planet kita.</p>
+          </div>
+          <div class="footer-contact">
+            <h4>Kontak Kami</h4>
+            <p>+62 8912-3456</p>
+            <p>contactus@gmail.com</p>
+          </div>
+          <div class="footer-link">
+            <h4>Halaman</h4>
+            <a href="/">Beranda</a>
+            <a href="/">Tentang Kami</a>
+            <a href="/">Berita</a>
+            <a href="/">Kuis</a>
+            <a href="/">Video</a>
+            <a href="community.html">Komunitas</a>
+          </div>
+          <div class="footer-copy">
+            <div class="copyright">
+              <p>© 2023 - Copyright - HamzahRaihan</p>
+            </div>
+            <div class="socials">
+              <a href="https://twitter.com/_nocturnalguy">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M18.2048 2.25H21.5128L14.2858 10.51L22.7878 21.75H16.1298L10.9158 14.933L4.94984 21.75H1.63984L9.36984 12.915L1.21484 2.25H8.03984L12.7528 8.481L18.2028 2.25H18.2048ZM17.0438 19.77H18.8768L7.04484 4.126H5.07784L17.0438 19.77Z"
+                    fill="white"
+                  />
+                </svg>
+              </a>
+              <a href="https://www.facebook.com/HamzahRaihanIF">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M22 12C22 6.48 17.52 2 12 2C6.48 2 2 6.48 2 12C2 16.84 5.44 20.87 10 21.8V15H8V12H10V9.5C10 7.57 11.57 6 13.5 6H16V9H14C13.45 9 13 9.45 13 10V12H16V15H13V21.95C18.05 21.45 22 17.19 22 12Z" fill="white" />
+                </svg>
+              </a>
+              <a href="discordapp.com/users/461815302846545930">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M19.2701 5.33005C17.9401 4.71005 16.5001 4.26005 15.0001 4.00005C14.987 3.99963 14.9739 4.00209 14.9618 4.00728C14.9497 4.01246 14.9389 4.02023 14.9301 4.03005C14.7501 4.36005 14.5401 4.79005 14.4001 5.12005C12.8091 4.88005 11.1911 4.88005 9.60012 5.12005C9.46012 4.78005 9.25012 4.36005 9.06012 4.03005C9.05012 4.01005 9.02012 4.00005 8.99012 4.00005C7.49012 4.26005 6.06012 4.71005 4.72012 5.33005C4.71012 5.33005 4.70012 5.34005 4.69012 5.35005C1.97012 9.42005 1.22012 13.38 1.59012 17.3C1.59012 17.32 1.60012 17.34 1.62012 17.35C3.42012 18.67 5.15012 19.47 6.86012 20C6.89012 20.01 6.92012 20 6.93012 19.98C7.33012 19.43 7.69012 18.85 8.00012 18.24C8.02012 18.2 8.00012 18.16 7.96012 18.15C7.39012 17.93 6.85012 17.67 6.32012 17.37C6.28012 17.35 6.28012 17.29 6.31012 17.26C6.42012 17.18 6.53012 17.09 6.64012 17.01C6.66012 16.99 6.69012 16.99 6.71012 17C10.1501 18.57 13.8601 18.57 17.2601 17C17.2801 16.99 17.3101 16.99 17.3301 17.01C17.4401 17.1 17.5501 17.18 17.6601 17.27C17.7001 17.3 17.7001 17.36 17.6501 17.38C17.1301 17.69 16.5801 17.94 16.0101 18.16C15.9701 18.17 15.9601 18.22 15.9701 18.25C16.2901 18.86 16.6501 19.44 17.0401 19.99C17.0701 20 17.1001 20.01 17.1301 20C18.8501 19.47 20.5801 18.67 22.3801 17.35C22.4001 17.34 22.4101 17.32 22.4101 17.3C22.8501 12.77 21.6801 8.84005 19.3101 5.35005C19.3001 5.34005 19.2901 5.33005 19.2701 5.33005ZM8.52012 14.91C7.49012 14.91 6.63012 13.96 6.63012 12.79C6.63012 11.62 7.47012 10.67 8.52012 10.67C9.58012 10.67 10.4201 11.63 10.4101 12.79C10.4101 13.96 9.57012 14.91 8.52012 14.91ZM15.4901 14.91C14.4601 14.91 13.6001 13.96 13.6001 12.79C13.6001 11.62 14.4401 10.67 15.4901 10.67C16.5501 10.67 17.3901 11.63 17.3801 12.79C17.3801 13.96 16.5501 14.91 15.4901 14.91Z"
+                    fill="white"
+                  />
+                </svg>
+              </a>
+              <a href="https://www.instagram.com/hamzah_raihan/">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M13.0281 2.00099C13.7578 1.99819 14.4876 2.00552 15.2171 2.02299L15.4111 2.02999C15.6351 2.03799 15.8561 2.04799 16.1231 2.05999C17.1871 2.10999 17.9131 2.27799 18.5501 2.52499C19.2101 2.77899 19.7661 3.12299 20.3221 3.67899C20.8305 4.17859 21.2239 4.78293 21.4751 5.44999C21.7221 6.08699 21.8901 6.81399 21.9401 7.87799C21.9521 8.14399 21.9621 8.36599 21.9701 8.58999L21.9761 8.78399C21.9939 9.51318 22.0015 10.2426 21.9991 10.972L22.0001 11.718V13.028C22.0026 13.7577 21.9949 14.4875 21.9771 15.217L21.9711 15.411C21.9631 15.635 21.9531 15.856 21.9411 16.123C21.8911 17.187 21.7211 17.913 21.4751 18.55C21.2247 19.2177 20.8312 19.8226 20.3221 20.322C19.8221 20.8303 19.2174 21.2237 18.5501 21.475C17.9131 21.722 17.1871 21.89 16.1231 21.94C15.8561 21.952 15.6351 21.962 15.4111 21.97L15.2171 21.976C14.4876 21.9938 13.7578 22.0014 13.0281 21.999L12.2821 22H10.9731C10.2434 22.0025 9.51361 21.9948 8.78409 21.977L8.59009 21.971C8.3527 21.9624 8.11536 21.9524 7.87809 21.941C6.81409 21.891 6.08809 21.721 5.45009 21.475C4.78277 21.2243 4.17833 20.8308 3.67909 20.322C3.17013 19.8223 2.77631 19.2175 2.52509 18.55C2.27809 17.913 2.11009 17.187 2.06009 16.123C2.04895 15.8857 2.03895 15.6484 2.03009 15.411L2.02509 15.217C2.00665 14.4875 1.99832 13.7577 2.00009 13.028V10.972C1.9973 10.2426 2.00463 9.51318 2.02209 8.78399L2.02909 8.58999C2.03709 8.36599 2.04709 8.14399 2.05909 7.87799C2.10909 6.81299 2.27709 6.08799 2.52409 5.44999C2.77546 4.78261 3.17005 4.17843 3.68009 3.67999C4.17898 3.17074 4.78305 2.77656 5.45009 2.52499C6.08809 2.27799 6.81309 2.10999 7.87809 2.05999L8.59009 2.02999L8.78409 2.02499C9.51327 2.00656 10.2427 1.99823 10.9721 1.99999L13.0281 2.00099ZM12.0001 7.00099C11.3376 6.99162 10.6798 7.11401 10.0651 7.36105C9.45029 7.6081 8.89074 7.97486 8.41893 8.44004C7.94713 8.90522 7.57249 9.45952 7.31678 10.0707C7.06106 10.682 6.92938 11.3379 6.92938 12.0005C6.92938 12.663 7.06106 13.319 7.31678 13.9302C7.57249 14.5414 7.94713 15.0958 8.41893 15.5609C8.89074 16.0261 9.45029 16.3929 10.0651 16.6399C10.6798 16.887 11.3376 17.0094 12.0001 17C13.3262 17 14.5979 16.4732 15.5356 15.5355C16.4733 14.5978 17.0001 13.3261 17.0001 12C17.0001 10.6739 16.4733 9.40213 15.5356 8.46445C14.5979 7.52677 13.3262 7.00099 12.0001 7.00099ZM12.0001 9.00099C12.3986 8.99364 12.7946 9.06578 13.1649 9.21319C13.5352 9.3606 13.8724 9.58033 14.1569 9.85953C14.4413 10.1387 14.6673 10.4718 14.8215 10.8393C14.9758 11.2068 15.0553 11.6014 15.0554 12C15.0554 12.3986 14.9761 12.7931 14.8219 13.1607C14.6678 13.5283 14.4419 13.8614 14.1576 14.1407C13.8732 14.42 13.5361 14.6399 13.1658 14.7874C12.7955 14.9349 12.3996 15.0072 12.0011 15C11.2054 15 10.4424 14.6839 9.87977 14.1213C9.31716 13.5587 9.00109 12.7956 9.00109 12C9.00109 11.2043 9.31716 10.4413 9.87977 9.87867C10.4424 9.31606 11.2054 8.99999 12.0011 8.99999L12.0001 9.00099ZM17.2501 5.50099C16.9275 5.5139 16.6224 5.65114 16.3987 5.88396C16.175 6.11678 16.0501 6.42712 16.0501 6.74999C16.0501 7.07285 16.175 7.38319 16.3987 7.61601C16.6224 7.84884 16.9275 7.98607 17.2501 7.99899C17.5816 7.99899 17.8996 7.86729 18.134 7.63287C18.3684 7.39845 18.5001 7.08051 18.5001 6.74899C18.5001 6.41747 18.3684 6.09952 18.134 5.8651C17.8996 5.63068 17.5816 5.49899 17.2501 5.49899V5.50099Z"
+                    fill="white"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="../script.js"></script>
+    <script src="../js/community.js"></script>
+  </body>
+</html>
