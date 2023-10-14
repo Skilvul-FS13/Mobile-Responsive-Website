@@ -1,3 +1,6 @@
+import { formatDate, USER_POST_API, USER_API } from './utils/context.js';
+import { placeholder } from './utils/postPlaceholder.js';
+
 // get profile
 const getProfileByUsername = () => {
   const searchParams = new URLSearchParams(window.location.search);
@@ -5,8 +8,6 @@ const getProfileByUsername = () => {
 };
 //
 const postContainer = document.querySelector('.post-list');
-const USER_POST_API = 'https://651d09d644e393af2d590b6d.mockapi.io/api/v1/userPost';
-const USER_API = 'https://651d09d644e393af2d590b6d.mockapi.io/api/v1/account';
 
 // Fetch user post data
 const userPostData = fetch(USER_POST_API).then((response) => response.json());
@@ -41,20 +42,8 @@ Promise.all([userPostData, userData])
   })
   .catch((error) => console.error(error));
 
-// // format Date
-const formatDate = (date) => {
-  const options = {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-    hour: 'numeric',
-    minute: 'numeric',
-    hour12: false,
-    timeZone: 'Asia/Jakarta',
-  };
-
-  return new Date(date).toLocaleDateString('id-ID', options);
-};
+// render placeholder first before render data
+postContainer.innerHTML = placeholder().repeat(10);
 
 const showUserPostsByUsername = (p) => {
   return `
