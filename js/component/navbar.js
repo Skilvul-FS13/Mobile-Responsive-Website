@@ -1,4 +1,6 @@
+// navbar active
 const navbar = document.querySelector('header');
+
 navbar.innerHTML = `
     <div class="navbar-container">
         <div class="link-navbar">
@@ -78,9 +80,25 @@ loginButton.addEventListener('click', function () {
 registerButton.addEventListener('click', function () {
   window.location.href = '/Auth/register.html';
 });
+const locatePage = window.location.href;
 
-const navbarContainer = document.querySelector('.navbar-container');
+// get active button for navbar
+switch (locatePage) {
+  case 'http://127.0.0.1:5501/':
+    homeLink.classList.add('active');
+    break;
+  case 'http://127.0.0.1:5501/views/community.html':
+    communityLink.classList.add('active');
+    break;
+  case 'http://127.0.0.1:5501/views/aboutus.html':
+    aboutUsLink.classList.add('active');
+    break;
+  default:
+    break;
+}
+
 // navbar shadow
+const navbarContainer = document.querySelector('.navbar-container');
 window.addEventListener('scroll', () => {
   if (window.scrollY > 0) {
     navbarContainer.classList.add('navbar-shadow');
@@ -100,11 +118,8 @@ navInformation.addEventListener('click', () => {
 
 // sidebar mobile
 const sidebar = document.querySelector('.sidebar');
-console.log('🚀 ~ file: navbar.js:105 ~ sidebar:', sidebar);
 const burgerButton = document.querySelector('.nav-burger');
-console.log('🚀 ~ file: navbar.js:106 ~ burgerButton:', burgerButton);
 const overlay = document.querySelector('.overlay');
-console.log('🚀 ~ file: navbar.js:108 ~ overlay:', overlay);
 const dropdownSidebar = document.querySelector('.dropdown-sidebar #information');
 const dropdownSidebarList = document.querySelector('.dropdown-sidebar-list');
 
