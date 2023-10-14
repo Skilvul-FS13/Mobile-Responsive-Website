@@ -5,16 +5,16 @@ footer.innerHTML = `
       <div class="footer-info">
         <div class="footer-gwa">
           <img src="https://ik.imagekit.io/alzirahmana/Asset%20-%20mobile%20responsive%20web/main-logo-small.png?updatedAt=1697183029244" alt="" />
-          <p>Melalui artikel informatif, tips praktis, dan keterlibatan komunitas, kami bertujuan untuk memberdayakan
+          <p class="fs-6">Melalui artikel informatif, tips praktis, dan keterlibatan komunitas, kami bertujuan untuk memberdayakan
             individu untuk memberikan dampak yang berarti terhadap planet kita.</p>
         </div>
         <div class="footer-contact">
-          <h4>Kontak Kami</h4>
-          <p>+62 8912-3456</p>
-          <p>contactus@gmail.com</p>
+          <h4 class="fs-6 fw-semibold m-0 p-0">Kontak Kami</h4>
+          <p class="fs-6 m-0 p-0">+62 8912-3456</p>
+          <p class="fs-6 m-0 p-0">contactus@gmail.com</p>
         </div>
         <div class="footer-link">
-          <h4>Halaman</h4>
+          <h4 class="fs-6 fw-semibold m-0 p-0">Halaman</h4>
           <a href="/">Beranda</a>
           <a href="/">Tentang Kami</a>
           <a href="/">Berita</a>
@@ -24,7 +24,7 @@ footer.innerHTML = `
         </div>
         <div class="footer-copy">
           <div class="copyright">
-            <p>© 2023 - Copyright - HamzahRaihan</p>
+            <p>© 2023 - Copyright - FS13</p>
           </div>
           <div class="socials">
             <a href="https://twitter.com/_nocturnalguy">
