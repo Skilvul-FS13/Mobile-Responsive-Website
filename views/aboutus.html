@@ -23,23 +23,25 @@
     <div class="p-5 text-center bg-body-tertiary">
       <div class="container py-5 my-5">
         <h1 class="text-body-emphasis">Tentang Kami</h1>
-        <p class="col-lg-8 mx-auto lead">Website "GreenWorldAware" adalah sebuah platform yang didedikasikan untuk
-          meningkatkan kesadaran tentang lingkungan dan mempromosikan gaya hidup berkelanjutan.</p>
+        <p class="col-lg-8 mx-auto fs-5"> GreenWorldWare adalah sebuah website yang berisikan tentang atikel, video
+          edukasi, kuis seputar dampak pencemaran lingkungan dan tempat bagi para pengguna website berkontribusi untuk
+          membagikan kegiatannya tentang peduli lingkungan seperti langkah-langkah apa yang dapat diambil oleh
+          masyarakat dan pemerintah untuk mengatasi masalah sampah dan lain-lain.</p>
       </div>
     </div>
   </div>
 
   <div class="container">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-sm-6 py-0">
         <img
           src="https://ik.imagekit.io/alzirahmana/Asset%20-%20mobile%20responsive%20web/hero-aboutus.png?updatedAt=1697193730049"
-          alt="Image" class="img-fill p-4 w-100" />
+          alt="Image" class="w-100" />
       </div>
-      <div class="col-md-6">
+      <div class="col-sm-6">
         <div class="">
           <h2 class="text-lg py-3">Visi</h2>
-          <p>
+          <p class="fs-5">
             Visi kami adalah menciptakan dunia di mana lingkungan alam dapat berkembang dengan seimbang, tanpa
             terpengaruh oleh pencemaran dan kerusakan yang tidak perlu. Kami ingin melihat generasi masa depan menikmati
             alam yang indah,
@@ -48,7 +50,7 @@
         </div>
         <div class="">
           <h2 class="text-lg py-3">Misi</h2>
-          <ol>
+          <ol class="fs-5">
             <li>
               Pendidikan dan Kesadaran: Kami berupaya meningkatkan kesadaran masyarakat tentang pentingnya menjaga
               kebersihan lingkungan. Kami menyelenggarakan seminar, lokakarya, dan kampanye pendidikan untuk memberikan
@@ -80,31 +82,71 @@
       </div>
     </div>
   </div>
-  <section class="py-5 text-center container">
+  <section class="container py-5 text-center mt-5">
     <div class="row py-lg-5">
-      <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">Album example</h1>
-        <p class="lead text-body-secondary">Something short and leading about the collection below—its contents, the
-          creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
+      <div class="col mx-auto">
+        <h2 class="py-3 text-lg-center">Temui Tim</h2>
       </div>
     </div>
-
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-      <div class="col">
-        <div class="card shadow-sm">
-          <img
-            src="https://ik.imagekit.io/alzirahmana/Asset%20-%20mobile%20responsive%20web/male.png?updatedAt=1697361198103"
-            alt="">
-          <div class="card-body">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-              content. This content is a little bit longer.</p>
-            <div class="d-flex justify-content-between align-items-center">
-            </div>
-          </div>
+    <div class="row justify-content-center gap-3">
+      <div class="card shadow-lg" style="width: 23rem;">
+        <img
+          src="https://ik.imagekit.io/alzirahmana/Asset%20-%20mobile%20responsive%20web/male.png?updatedAt=1697361198103"
+          class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 class="card-title fw-medium fs-4">Hamzah Raihan Ikhsanul Fikri</h3>
+          <p class="card-text">Fullstack Web Development</p>
         </div>
       </div>
+      <div class="card shadow-lg" style="width: 23rem;">
+        <img
+          src="https://ik.imagekit.io/alzirahmana/Asset%20-%20mobile%20responsive%20web/female.png?updatedAt=1697361198326"
+          class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 class="card-title fw-medium fs-4">Yumitha Septyandari</h3>
+          <p class="card-text foo">Fullstack Web Development</p>
+        </div>
+      </div>
+      <div class="card shadow-lg" style="width: 23rem;">
+        <img
+          src="https://ik.imagekit.io/alzirahmana/Asset%20-%20mobile%20responsive%20web/male.png?updatedAt=1697361198103"
+          class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 class="card-title fw-medium fs-4">Alzi Rahmana Putra</h3>
+          <p class="card-text">Fullstack Web Development</p>
+        </div>
+      </div>
+
     </div>
+
   </section>
+
+  <!-- start contact us -->
+  <section class="contact-us my-5">
+    <div class="headline-contact">
+      <h2>Kontak Kami</h2>
+    </div>
+    <form id="form">
+      <div class="personal-info">
+        <input type="text" id="name" placeholder="nama" />
+
+        <input type="text" id="city" placeholder="kota" />
+      </div>
+
+      <input type="email" id="email" placeholder="email" />
+
+      <input type="text" id="zip-code" placeholder="zip-code" />
+
+      <div class="form-check">
+        <label for="" id="check"> Dengan ini saya menyatakan data yang diisi pada form ini adalah benar dan telah sesuai
+        </label>
+        <input type="checkbox" id="status" />
+      </div>
+      <button class="btn-primary" id="submit-form" type="submit">Submit</button>
+      <div id="warning"></div>
+    </form>
+  </section>
+  <!-- end of contact us -->
 
   <script src="../js/component/navbar.js"></script>
   <script src="../js/component/footer.js"></script>
