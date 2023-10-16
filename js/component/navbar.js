@@ -63,7 +63,7 @@ sidebar.innerHTML = `
   </div>
 
   <a class="nav-button" id="quiz" href="#">Kuis</a>
-  <a class="nav-button" id="community" href="./pages/community.html">Komunitas</a>
+  <a class="nav-button" id="community" href="#">Komunitas</a>
   <div class="login-sidebar">
     <a href="register.html" class="btn-primary" id="register">Daftar</a>
     <a href="login.html" class="btn-secondary" id="login">Masuk</a>
@@ -71,24 +71,27 @@ sidebar.innerHTML = `
 </div>`;
 
 // Ambil elemen-elemen tautan navbar
-const homeLink = document.getElementById('home');
-console.log('🚀 ~ file: navbar.js:46 ~ homeLink:', homeLink);
-const aboutUsLink = document.getElementById('aboutus');
-const informationLink = document.getElementById('information');
-const quizLink = document.getElementById('quiz');
-const communityLink = document.getElementById('community');
+const homeLink = document.querySelectorAll('#home');
+const aboutUsLink = document.querySelectorAll('#aboutus');
+const informationLink = document.querySelectorAll('information');
+// const quizLink = document.querySelectorAll('quiz');
+const communityLink = document.querySelectorAll('#community');
 
 // Ambil elemen-elemen tombol login dan register
 const loginButton = document.getElementById('login');
 const registerButton = document.getElementById('register');
 
 // Tambahkan event listener untuk mengarahkan ke halaman yang sesuai
-homeLink.addEventListener('click', function () {
-  window.location.href = '/';
+homeLink.forEach((btn) => {
+  btn.addEventListener('click', function () {
+    window.location.href = '/';
+  });
 });
 
-aboutUsLink.addEventListener('click', function () {
-  window.location.href = '/views/aboutus.html';
+aboutUsLink.forEach((btn) => {
+  btn.addEventListener('click', function () {
+    window.location.href = '/views/aboutus.html';
+  });
 });
 
 // informationLink.addEventListener("click", function () {
@@ -96,12 +99,14 @@ aboutUsLink.addEventListener('click', function () {
 //   alert("Tautan Informasi diklik");
 // });
 
-quizLink.addEventListener('click', function () {
-  window.location.href = '/quiz.html';
-});
+// quizLink.addEventListener('click', function () {
+//   window.location.href = '/quiz.html';
+// });
 
-communityLink.addEventListener('click', function () {
-  window.location.href = '/views/community.html';
+communityLink.forEach((btn) => {
+  btn.addEventListener('click', function () {
+    window.location.href = '/views/community.html';
+  });
 });
 
 loginButton.addEventListener('click', function () {
@@ -116,13 +121,13 @@ const locatePage = window.location.href;
 // get active button for navbar
 switch (locatePage) {
   case 'http://127.0.0.1:5501/':
-    homeLink.classList.add('active');
-    break;
-  case 'http://127.0.0.1:5501/views/community.html':
-    communityLink.classList.add('active');
+    homeLink.forEach((btn) => btn.classList.add('active'));
     break;
   case 'http://127.0.0.1:5501/views/aboutus.html':
-    aboutUsLink.classList.add('active');
+    aboutUsLink.forEach((btn) => btn.classList.add('active'));
+    break;
+  case 'http://127.0.0.1:5501/views/community.html':
+    communityLink.forEach((btn) => btn.classList.add('active'));
     break;
   default:
     break;
