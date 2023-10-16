@@ -63,3 +63,14 @@ button[role='button'] {
 }
 
 /*=====  End of profile page           ======*/
+
+/*=============================================
+=            toast animation                  =
+=============================================*/
+
+.toast-fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/*=====  End of toast animation         ======*/
