@@ -1,6 +1,5 @@
 // navbar active
 const navbar = document.querySelector('header');
-
 navbar.innerHTML = `
     <div class="navbar-container">
         <div class="link-navbar">
@@ -41,8 +40,39 @@ navbar.innerHTML = `
     </div>
 `;
 
+// sidebar
+const sidebar = document.querySelector('.sidebar');
+// render sidebar
+sidebar.innerHTML = `
+<div class="sidebar-link">
+  <a class="nav-button" id="home" href="#">Beranda</a>
+  <a class="nav-button" id="aboutus" href="#">Tentang Kami</a>
+  <div class="dropdown-sidebar">
+    <a class="nav-button" id="information" href="javascript:void(0);"
+      >Informasi
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="14" height="14" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+      </svg>
+    </a>
+    <div class="dropdown-sidebar-list">
+      <a href="javascript:void(0)">Berita</a>
+      <a href="javascript:void(0)">Dampak</a>
+      <a href="javascript:void(0)">Solusi</a>
+      <a href="javascript:void(0)">Video</a>
+    </div>
+  </div>
+
+  <a class="nav-button" id="quiz" href="#">Kuis</a>
+  <a class="nav-button" id="community" href="./pages/community.html">Komunitas</a>
+  <div class="login-sidebar">
+    <a href="register.html" class="btn-primary" id="register">Daftar</a>
+    <a href="login.html" class="btn-secondary" id="login">Masuk</a>
+  </div>
+</div>`;
+
 // Ambil elemen-elemen tautan navbar
 const homeLink = document.getElementById('home');
+console.log('🚀 ~ file: navbar.js:46 ~ homeLink:', homeLink);
 const aboutUsLink = document.getElementById('aboutus');
 const informationLink = document.getElementById('information');
 const quizLink = document.getElementById('quiz');
@@ -80,6 +110,7 @@ loginButton.addEventListener('click', function () {
 registerButton.addEventListener('click', function () {
   window.location.href = '/Auth/register.html';
 });
+
 const locatePage = window.location.href;
 
 // get active button for navbar
@@ -117,7 +148,7 @@ navInformation.addEventListener('click', () => {
 });
 
 // sidebar mobile
-const sidebar = document.querySelector('.sidebar');
+
 const burgerButton = document.querySelector('.nav-burger');
 const overlay = document.querySelector('.overlay');
 const dropdownSidebar = document.querySelector('.dropdown-sidebar #information');
@@ -142,7 +173,6 @@ dropdownSidebar.addEventListener('click', () => {
 // navbar dynamic
 const auth = localStorage.getItem('isLoggedIn', 'USER_LOGGED_IN');
 const navbarButtonLogin = document.querySelector('.nav-button-login');
-
 const sidebarButtonLogin = document.querySelector('.login-sidebar');
 
 if (auth) {
