@@ -1,5 +1,6 @@
 import showUserPosts from '../component/posts.js';
 import { USER_POST_API, USER_API } from '../utils/context.js';
+import { handlePostFeatures } from '../utils/handlePostFeatures.js';
 import { postPlaceholder, userNotFound, userPlaceholder } from '../utils/placeholders.js';
 
 // get profile
@@ -43,7 +44,7 @@ Promise.all([userPostData, userData])
       // get all like buttons
       const likeButton = document.querySelectorAll('#like-button');
       console.log(likeButton);
-
+      handlePostFeatures();
       // condition if user has not made any post yet, render post not found
     } else if (profileContainer.textContent.trim() == 'Pengguna tidak ditemukan') {
       postContainer.innerHTML = '';
