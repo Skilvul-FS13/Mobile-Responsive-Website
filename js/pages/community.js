@@ -36,8 +36,8 @@ Promise.all([userPostData, userData])
   })
   .then((postById) => {
     const getAllPost = postById.map((p) => showUserPosts(p)).join('');
-    postContainer.innerHTML = getAllPost;
 
+    postContainer.innerHTML = getAllPost;
     // handle post if logged in or if not logged in
     handlePostFeatures(postById);
   })
