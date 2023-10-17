@@ -39,7 +39,7 @@ Promise.all([userPostData, userData])
     postContainer.innerHTML = getAllPost;
 
     // handle post if logged in or if not logged in
-    handlePostFeatures();
+    handlePostFeatures(postById);
   })
   .catch((error) => console.error(error));
 

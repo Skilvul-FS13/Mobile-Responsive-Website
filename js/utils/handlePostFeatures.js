@@ -1,4 +1,5 @@
-export function handlePostFeatures() {
+export function handlePostFeatures(postById) {
+  console.log('🚀 ~ file: handlePostFeatures.js:2 ~ handlePostFeatures ~ postById:', postById);
   // get all like buttons
   const likeButton = document.querySelectorAll('#like-button');
 
