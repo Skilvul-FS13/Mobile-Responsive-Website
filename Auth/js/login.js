@@ -1,4 +1,5 @@
 
+const AUTH_KEY = 'c5aed7e7f609d2370861f380eccb94e6';
 const API_URL = 'https://651d09d644e393af2d590b6d.mockapi.io/api/v1/account';
 
 const loginFormElement = document.getElementById('login-form');
@@ -39,9 +40,6 @@ loginFormElement.addEventListener('submit', (event) => {
         fetch(API_URL, {
                 method: 'POST',
                 body: JSON.stringify(body),
-                headers: {
-                    'Content-Type': 'application/json',
-                },
             })
             .then((response) => {
                 if (!response.ok) {
@@ -52,7 +50,7 @@ loginFormElement.addEventListener('submit', (event) => {
             .then((response) => {
                 // Simpan data login ke localStorage
                 const stringify = JSON.stringify(response);
-                localStorage.setItem(stringify);
+                localStorage.setItem(AUTH_KEY, stringify);
 
                 // Redirect ke halaman setelah login
                 window.location.href = 'index.html';
@@ -62,6 +60,8 @@ loginFormElement.addEventListener('submit', (event) => {
             });
     }
 });
+
+
 
 function showError(input, errorElement, errorMessage) {
     input.classList.add('is-invalid');
