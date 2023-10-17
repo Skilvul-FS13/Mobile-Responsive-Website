@@ -38,10 +38,22 @@ Promise.all([userPostData, userData])
     postContainer.innerHTML = getAllPost;
     // get all like buttons
     const likeButton = document.querySelectorAll('#like-button');
-    console.log(likeButton);
+
+    // get all comment buttons
+    const commentButton = document.querySelectorAll('#comment');
+
+    // get all share buttons
+    const shareButton = document.querySelectorAll('#share-button');
 
     likeButton.forEach((btn) => {
-      btn.addEventListener('click', (event) => handleUserMustLogin());
+      btn.addEventListener('click', (event) => handleUserMustLoginBeforeLike());
+    });
+
+    commentButton.forEach((btn) => {
+      btn.addEventListener('click', (event) => handleFeatureNotAvailable());
+    });
+    shareButton.forEach((btn) => {
+      btn.addEventListener('click', (event) => handleFeatureNotAvailable());
     });
   })
   .catch((error) => console.error(error));
@@ -49,7 +61,8 @@ Promise.all([userPostData, userData])
 // show skeleton before render data
 postContainer.innerHTML = postPlaceholder().repeat(10);
 
-function handleUserMustLogin(event) {
+// handle user must login before using like feature
+function handleUserMustLoginBeforeLike(event) {
   const IS_LOGGED_IN_KEY = 'isLoggedIn';
   const isLoggedIn = localStorage.getItem(IS_LOGGED_IN_KEY);
 
@@ -58,6 +71,20 @@ function handleUserMustLogin(event) {
   } else {
     const toastContainer = document.querySelector('.toast-container');
     toastContainer.innerHTML += getNotification();
+    hideNextIndex(0);
+  }
+}
+
+// handle user must login before using comment feature
+function handleFeatureNotAvailable(event) {
+  const IS_LOGGED_IN_KEY = 'isLoggedIn';
+  const isLoggedIn = localStorage.getItem(IS_LOGGED_IN_KEY);
+
+  if (isLoggedIn) {
+    console.log('nice');
+  } else {
+    const toastContainer = document.querySelector('.toast-container');
+    toastContainer.innerHTML += getNotificationFeatures();
     hideNextIndex(0);
   }
 }
@@ -84,8 +111,9 @@ const hideNextIndex = (index) => {
     return;
   }
   setTimeout(() => {
+    currentNotif.classList.add('d-none');
     hideNextIndex(index + 1);
-  }, 2000);
+  }, 1000);
 };
 
 // Toast notification that you aren't login yet
@@ -94,9 +122,20 @@ function getNotification() {
   <div class="toast d-block" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-header">
       <strong class="me-auto">Notifikasi</strong>
-      <small class="text-body-secondary">just now</small>
       <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
     </div>
     <div class="toast-body">Kamu belum login</div>
+  </div>`;
+}
+
+// Toast notification that you aren't login yet
+function getNotificationFeatures() {
+  return `
+  <div class="toast d-block" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <strong class="me-auto">Notifikasi</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">Fitur ini belum tersedia</div>
   </div>`;
 }
