@@ -42,6 +42,9 @@ loginFormElement.addEventListener('submit', (event) => {
     if (email.trim() === '') {
         showError(emailInput, emailError, 'Email harus diisi.');
         isValid = false;
+    } else if (!isValidEmail(email)) {
+        showError(emailInput, emailError, 'Email tidak valid. email harus mengandung karakter \'@\'.');
+        isValid = false;
     } else {
         hideError(emailInput, emailError);
     }
@@ -119,4 +122,9 @@ function hideError(input, errorElement) {
     input.classList.remove('is-invalid');
     errorElement.textContent = '';
     errorElement.style.display = 'none';
+}
+
+function isValidEmail(email) {
+    const emailPattern = /\S+@\S+\.\S+/;
+    return emailPattern.test(email);
 }

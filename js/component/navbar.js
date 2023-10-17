@@ -21,8 +21,11 @@ navbar.innerHTML = `
                 </nav>
             </div>
             <div class="nav-button-login">
-                <a href="#" class="btn-secondary" id="login">Masuk</a>
-                <a href="#" class="btn-primary" id="register">Daftar</a>
+            <a href="#" class="btn-secondary" id="login">Masuk</a>
+            <a href="#" class="btn-primary" id="register">Daftar</a>
+            </div>
+            <div id="userLogo" class="nav-button-user" style="display: none">
+                <img src="https://ik.imagekit.io/alzirahmana/Asset%20-%20mobile%20responsive%20web/Jese%20Leos.png?updatedAt=1697535830098" alt="profile" />
             </div>
             <div class="nav-burger">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
