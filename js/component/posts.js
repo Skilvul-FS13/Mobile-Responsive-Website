@@ -1,8 +1,9 @@
 import { formatDate } from '../utils/context.js';
 
 const showUserPosts = (p) => {
+  // console.log('🚀 ~ file: posts.js:4 ~ showUserPosts ~ p:', p);
   return `
-  <div class="post-box d-flex gap-2 align-items-start rounded-2 mb-4">
+  <div class="post-box d-flex gap-2 align-items-start rounded-2 mb-4" data-post-id="${p.id}">
     <div class="avatar">
       <a href="./profile.html?username=${p.username}"><img class="rounded-5" src="${p.avatar}" alt="avatar" width="50" height="50" /></a>
     </div>
@@ -12,19 +13,13 @@ const showUserPosts = (p) => {
       <p class="content" id="content">
        ${p.post}
       </p>
-      <div class="action d-flex justify-content-between">
-        <div class="like d-flex" id="like">
+      <div class="action d-flex justify-content-between align-items-center">
+      
+        <div class="like d-flex align-items-center" id="like">
           <button class="border-0 m-0 p-0" type="button" id="like-button" role="button">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <path
-                d="M15 10L14.26 9.87702C14.2421 9.98446 14.2479 10.0945 14.2769 10.1995C14.3058 10.3045 14.3573 10.4019 14.4277 10.485C14.4982 10.5681 14.5858 10.6348 14.6847 10.6806C14.7835 10.7263 14.8911 10.75 15 10.75V10ZM4 10V9.25002C3.80109 9.25002 3.61032 9.32904 3.46967 9.46969C3.32902 9.61035 3.25 9.80111 3.25 10H4ZM6 20.75H17.36V19.25H6V20.75ZM18.56 9.25002H15V10.75H18.56V9.25002ZM15.74 10.123L16.546 5.28802L15.066 5.04102L14.26 9.87702L15.74 10.123ZM14.82 3.25002H14.606V4.75002H14.819L14.82 3.25002ZM11.485 4.92002L8.97 8.69302L10.218 9.52502L12.733 5.75202L11.485 4.92002ZM7.93 9.25002H4V10.75H7.93V9.25002ZM3.25 10V18H4.75V10H3.25ZM20.057 18.54L21.257 12.54L19.787 12.245L18.587 18.245L20.057 18.539V18.54ZM8.97 8.69302C8.8559 8.86431 8.70127 9.00377 8.51985 9.10094C8.33842 9.1981 8.13581 9.24897 7.93 9.24902V10.749C8.85 10.749 9.708 10.29 10.218 9.52502L8.97 8.69302ZM16.546 5.28802C16.5877 5.03739 16.5743 4.77969 16.5067 4.53477C16.4392 4.28984 16.3191 4.06256 16.1549 3.86871C15.9906 3.67487 15.7861 3.51912 15.5556 3.41228C15.3251 3.30543 15.0741 3.25007 14.82 3.25002L14.819 4.75002C14.8552 4.75011 14.892 4.75808 14.9249 4.77338C14.9578 4.78868 14.9869 4.81094 15.0103 4.83863C15.0337 4.86631 15.0508 4.89875 15.0604 4.9337C15.07 4.96864 15.0719 5.00527 15.066 5.04102L16.546 5.28802ZM18.56 10.749C19.35 10.749 19.94 11.471 19.786 12.244L21.257 12.539C21.3366 12.1401 21.3267 11.7275 21.228 11.3329C21.1293 10.9383 20.9443 10.5705 20.6864 10.256C20.4284 9.94148 20.1039 9.68812 19.7362 9.51417C19.3685 9.34022 18.9668 9.25 18.56 9.25002V10.75V10.749ZM17.36 20.75C17.9957 20.7501 18.6118 20.529 19.1035 20.1261C19.5952 19.7232 19.9322 19.1624 20.057 18.539L18.587 18.244C18.5303 18.5276 18.377 18.7828 18.1533 18.966C17.9296 19.1493 17.6492 19.2503 17.36 19.25V20.75ZM14.606 3.25002C13.9887 3.25007 13.3809 3.40152 12.8366 3.69284C12.2923 3.98417 11.8284 4.40536 11.486 4.91902L12.733 5.75202C12.9385 5.44368 13.2171 5.18988 13.5438 5.01508C13.8706 4.84028 14.2354 4.74989 14.606 4.75002V3.25002ZM6 19.25C5.31 19.25 4.75 18.69 4.75 18H3.25C3.25 18.7294 3.53973 19.4288 4.05546 19.9446C4.57118 20.4603 5.27065 20.75 6 20.75V19.25Z"
-                fill="black"
-              />
-              <path d="M8 10V20" stroke="black" stroke-width="1.5" />
-            </svg>
+             ${p.isLiked ? '<i class="bi bi-tree-fill"></i>' : '<i class="bi bi-tree"></i>'}
           </button>
-
-          <p class="text-body-secondary">${p.likes}</p>
+          <p class="like-count p-0 m-0 text-body-secondary">${p.likes}</p>
         </div>
         <div class="comment d-flex" id="comment">
           <button class="border-0 m-0 p-0" type="button" id="comment-button" role="button">
@@ -38,7 +33,7 @@ const showUserPosts = (p) => {
               />
             </svg>
           </button>
-          <p class="text-body-secondary">0</p>
+          <p class="text-body-secondary p-0 m-0 ">0</p>
         </div>
         <div class="share d-flex" id="share">
           <button class="border-0 m-0 p-0" type="button" id="share-button" role="button">
