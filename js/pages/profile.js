@@ -40,11 +40,12 @@ Promise.all([userPostData, userData])
 
     // condition if user has made a post, render post by username
     if (getPostFiltered) {
+      // console.log('🚀 ~ file: profile.js:43 ~ .then ~ getPostFiltered:', getPostFiltered);
       postContainer.innerHTML = getPostFiltered;
       // get all like buttons
       const likeButton = document.querySelectorAll('#like-button');
       console.log(likeButton);
-      handlePostFeatures();
+      handlePostFeatures(getPostFiltered);
       // condition if user has not made any post yet, render post not found
     } else if (profileContainer.textContent.trim() == 'Pengguna tidak ditemukan') {
       postContainer.innerHTML = '';
