@@ -26,7 +26,7 @@ const showUserPosts = (p) => {
 
           <p class="text-body-secondary">${p.likes}</p>
         </div>
-        <div class="commment d-flex" id="comment">
+        <div class="comment d-flex" id="comment">
           <button class="border-0 m-0 p-0" type="button" id="comment-button" role="button">
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
               <path
