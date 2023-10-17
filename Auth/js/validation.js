@@ -115,7 +115,7 @@ function showLoginModal() {
     const closeButton = successModal.querySelector('.btn-secondary');
     closeButton.addEventListener('click', function () {
         // Alihkan pengguna ke halaman home
-        window.location.href = '../index.html';
+        window.location.href = '/';
     });
 }
 

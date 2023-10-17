@@ -52,8 +52,9 @@ loginFormElement.addEventListener('submit', (event) => {
                 const stringify = JSON.stringify(response);
                 localStorage.setItem(AUTH_KEY, stringify);
 
-                // Redirect ke halaman setelah login
-                window.location.href = 'index.html';
+                // Tampilkan modal success
+                showLoginModal();
+
             })
             .catch((error) => {
                 console.error(error);
@@ -61,7 +62,18 @@ loginFormElement.addEventListener('submit', (event) => {
     }
 });
 
+// Fungsi untuk menampilkan login modal
+function showLoginModal() {
+    const successModal = document.getElementById("successLoginModal");
+    successModal.style.display = "block";
 
+    // Event listener untuk tombol "Close"
+    const closeButton = successModal.querySelector('.btn-secondary');
+    closeButton.addEventListener('click', function () {
+        // Alihkan pengguna ke halaman home
+        window.location.href = '../index.html';
+    });
+}
 
 function showError(input, errorElement, errorMessage) {
     input.classList.add('is-invalid');
