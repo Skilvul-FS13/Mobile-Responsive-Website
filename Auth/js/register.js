@@ -1,19 +1,43 @@
+const AUTH_KEY = 'c5aed7e7f609d2370861f380eccb94e6';
 const API_URL = 'https://651d09d644e393af2d590b6d.mockapi.io/api/v1/account';
 
 const loginFormElement = document.getElementById('registration-form');
+const firstNameInput = document.getElementById("firstName");
+const lastNameInput = document.getElementById("lastName");
 const emailInput = document.getElementById('email');
 const passwordInput = document.getElementById('password');
+const confirmPasswordInput = document.getElementById("confirmPassword");
 
-const emailError = document.getElementById('emailError');
-const passwordError = document.getElementById('passwordError');
+const firstNameError = document.getElementById("firstNameError");
+const lastNameError = document.getElementById("lastNameError");
+const emailError = document.getElementById("emailError");
+const passwordError = document.getElementById("passwordError");
+const confirmPasswordError = document.getElementById("confirmPasswordError");
 
 loginFormElement.addEventListener('submit', (event) => {
     event.preventDefault();
 
+    const firstName = firstNameInput.value;
+    const lastName = lastNameInput.value;
     const email = emailInput.value;
     const password = passwordInput.value;
+    const confirmPassword = confirmPasswordInput.value;
 
     let isValid = true;
+
+    if (firstName.trim() === '') {
+        showError(firstNameInput, firstNameError, 'Nama Depan harus diisi.');
+        isValid = false;
+    } else {
+        hideError(firstNameInput, firstNameError);
+    }
+
+    if (lastName.trim() === '') {
+        showError(lastNameInput, lastNameError, 'Nama Belakang harus diisi.');
+        isValid = false;
+    } else {
+        hideError(lastNameInput, lastNameError);
+    }
 
     if (email.trim() === '') {
         showError(emailInput, emailError, 'Email harus diisi.');
@@ -29,18 +53,28 @@ loginFormElement.addEventListener('submit', (event) => {
         hideError(passwordInput, passwordError);
     }
 
+    if (confirmPassword === '') {
+        showError(confirmPasswordInput, confirmPasswordError, 'Konfirmasi Password harus diisi.');
+        isValid = false;
+    } else if (password !== confirmPassword) {
+        showError(confirmPasswordInput, confirmPasswordError, 'Konfirmasi Password tidak cocok.');
+        isValid = false;
+    } else {
+        hideError(confirmPasswordInput, confirmPasswordError);
+    }
+
     if (isValid) {
         const body = {
+            firstName,
+            lastName,
             email,
             password,
+            confirmPassword
         };
 
         fetch(API_URL, {
                 method: 'POST',
                 body: JSON.stringify(body),
-                headers: {
-                    'Content-Type': 'application/json',
-                },
             })
             .then((response) => {
                 if (!response.ok) {
@@ -49,12 +83,12 @@ loginFormElement.addEventListener('submit', (event) => {
                 return response.json();
             })
             .then((response) => {
-                // Simpan data login ke localStorage
+                // Simpan data register ke localStorage
                 const stringify = JSON.stringify(response);
-                localStorage.setItem(stringify);
+                localStorage.setItem(AUTH_KEY, stringify);
 
                 // Redirect ke halaman setelah login
-                window.location.href = 'index.html';
+                window.location.href = '';
             })
             .catch((error) => {
                 console.error(error);
