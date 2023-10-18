@@ -6,6 +6,10 @@ export function handlePostFeatures(postById) {
   const shareButton = document.querySelectorAll('#share-button');
   const postElements = document.querySelectorAll('.post-box');
   const allLikeCount = document.querySelectorAll('.like-count');
+  const toastContainer = document.querySelector('.toast-container');
+
+  const IS_LOGGED_IN_KEY = 'isLoggedIn';
+  const isLoggedIn = localStorage.getItem(IS_LOGGED_IN_KEY);
 
   // get each likebutton by giving btn param, and index to get each elements
   likeButton.forEach((btn, index) => {
@@ -17,16 +21,21 @@ export function handlePostFeatures(postById) {
       // // console.log('🚀 ~ file: handlePostFeatures.js:19 ~ btn.addEventListener ~ likeCount:', likeCount);
 
       // get each button by giving btn.innerhtml.trim() so it can detect which button like is false or true
-      if (btn.innerHTML.trim() == '<i class="bi bi-tree-fill"></i>') {
-        let isLiked = false;
-        handleUserUnlikes(postId, likeCount, isLiked);
-        likeCount.innerHTML = parseInt(likeCount.textContent) - 1;
-        btn.innerHTML = '<i class="bi bi-tree"></i>';
+      if (isLoggedIn) {
+        if (btn.innerHTML.trim() == '<i class="bi bi-tree-fill"></i>') {
+          let isLiked = false;
+          handleUserUnlikes(postId, likeCount, isLiked);
+          likeCount.innerHTML = parseInt(likeCount.textContent) - 1;
+          btn.innerHTML = '<i class="bi bi-tree"></i>';
+        } else {
+          let isLiked = true;
+          handleUserLikes(postId, likeCount, isLiked);
+          likeCount.innerHTML = parseInt(likeCount.textContent) + 1;
+          btn.innerHTML = '<i class="bi bi-tree-fill"></i>';
+        }
       } else {
-        let isLiked = true;
-        handleUserLikes(postId, likeCount, isLiked);
-        likeCount.innerHTML = parseInt(likeCount.textContent) + 1;
-        btn.innerHTML = '<i class="bi bi-tree-fill"></i>';
+        toastContainer.innerHTML += getNotification();
+        hideNextIndex(0);
       }
     });
   });
@@ -44,8 +53,6 @@ export function handlePostFeatures(postById) {
   // handle user must login before using like feature
   function handleUserLikes(postId, likeCount, isLiked) {
     // // console.log('🚀 ~ file: handlePostFeatures.js:39 ~ handleUserLikes ~ postId:', postId);
-    const IS_LOGGED_IN_KEY = 'isLoggedIn';
-    const isLoggedIn = localStorage.getItem(IS_LOGGED_IN_KEY);
 
     if (isLoggedIn) {
       fetch(`https://651d09d644e393af2d590b6d.mockapi.io/api/v1/userPost/${postId}`, {
@@ -65,7 +72,6 @@ export function handlePostFeatures(postById) {
           return localStorage.setItem('DATA_KEY', JSON.stringify(data));
         });
     } else {
-      const toastContainer = document.querySelector('.toast-container');
       toastContainer.innerHTML += getNotification();
       hideNextIndex(0);
     }
@@ -102,9 +108,7 @@ export function handlePostFeatures(postById) {
 
   // handle user must login before using comment feature
   function handleFeatureNotAvailable(event) {
-    const toastContainer = document.querySelector('.toast-container');
     toastContainer.innerHTML += getNotificationFeatures();
-
     hideNextIndex(0);
   }
 
