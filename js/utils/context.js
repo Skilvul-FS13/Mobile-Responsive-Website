@@ -17,6 +17,7 @@ const formatDate = (date) => {
   };
 
   return new Date(date).toLocaleDateString('id-ID', options);
+  // return new Intl.DateTimeFormat('id-ID', options).format(new Date(date));
 };
 
 export { formatDate, USER_POST_API, USER_API };
