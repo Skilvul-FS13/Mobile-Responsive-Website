@@ -2,6 +2,27 @@ import { formatDate } from '../utils/context.js';
 
 const showUserPosts = (p) => {
   // console.log('🚀 ~ file: posts.js:4 ~ showUserPosts ~ p:', p);
+  const IS_LOGGED_IN_KEY = 'isLoggedIn';
+  const isLoggedIn = localStorage.getItem(IS_LOGGED_IN_KEY);
+
+  let likeButtonIcon;
+
+  // if user log in, like button will work
+  if (isLoggedIn) {
+    likeButtonLogin();
+  } else {
+    // if user not log in, like button will not work
+    likeButtonIcon = '<i class="bi bi-tree"></i>';
+  }
+
+  function likeButtonLogin() {
+    if (p.isLiked) {
+      likeButtonIcon = '<i class="bi bi-tree-fill"></i>';
+    } else {
+      likeButtonIcon = '<i class="bi bi-tree"></i>';
+    }
+  }
+
   return `
   <div class="post-box d-flex gap-2 align-items-start rounded-2 mb-4" data-post-id="${p.id}">
     <div class="avatar">
@@ -17,7 +38,7 @@ const showUserPosts = (p) => {
       
         <div class="like d-flex align-items-center" id="like">
           <button class="border-0 m-0 p-0" type="button" id="like-button" role="button">
-             ${p.isLiked ? '<i class="bi bi-tree-fill"></i>' : '<i class="bi bi-tree"></i>'}
+            ${likeButtonIcon}
           </button>
           <p class="like-count p-0 m-0 text-body-secondary">${p.likes}</p>
         </div>
