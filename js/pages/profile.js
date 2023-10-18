@@ -30,6 +30,11 @@ Promise.all([userPostData, userData])
     return getPostByUser;
   })
   .then((postByUsername) => {
+    postByUsername.sort((a, b) => {
+      const dateA = new Date(a.createdAt);
+      const dateB = new Date(b.createdAt);
+      return dateB - dateA; // For descending order (newest first)
+    });
     const profile = getProfileByUsername();
 
     const getPostByUsername = postByUsername.filter((postByUser) => {
@@ -43,8 +48,7 @@ Promise.all([userPostData, userData])
       // console.log('🚀 ~ file: profile.js:43 ~ .then ~ getPostFiltered:', getPostFiltered);
       postContainer.innerHTML = getPostFiltered;
       // get all like buttons
-      const likeButton = document.querySelectorAll('#like-button');
-      console.log(likeButton);
+
       handlePostFeatures(getPostFiltered);
       // condition if user has not made any post yet, render post not found
     } else if (profileContainer.textContent.trim() == 'Pengguna tidak ditemukan') {
