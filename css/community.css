@@ -3,6 +3,16 @@
 }
 
 /*=============================================
+=       bootstrap icon custom size            =
+=============================================*/
+
+i {
+  font-size: 1.4rem;
+}
+
+/*=====  End of bootstrap icon custom size  ======*/
+
+/*=============================================
 =            post section                     =
 =============================================*/
 .post-user {
@@ -63,3 +73,14 @@ button[role='button'] {
 }
 
 /*=====  End of profile page           ======*/
+
+/*=============================================
+=            toast animation                  =
+=============================================*/
+
+.toast-fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/*=====  End of toast animation         ======*/

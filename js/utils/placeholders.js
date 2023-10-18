@@ -1,4 +1,4 @@
-export const placeholder = () => {
+export const postPlaceholder = () => {
   return `
   <div class="post-box d-flex gap-2 align-items-start rounded-2 mb-4">
   <div class="avatar">
@@ -60,4 +60,58 @@ export const placeholder = () => {
     </div>
   </div>
 </div>`;
+};
+
+export const userPlaceholder = () => {
+  return `
+  <div class="container-lg placeholder d-flex flex-column profile-banner">
+    <img class="object-fit-cover placeholder rounded-bottom-2" src="" alt="" height="300" loading="lazy" />
+  </div>
+
+  <div class="container profile-container mt-0 pt-0 px-lg-5">
+    <div class="position-relative placeholder profile-avatar">
+      <img class="position-absolute placeholder rounded-pill" src="" alt="avatar" width="100" height="100" />
+    </div>
+    <div class="profile-detail pt-3">
+      <h4 class="p-0 m-0 placeholder-glow" id="displayName">
+        <span class="placeholder w-25"></span>
+      </h4>
+      <h5 class="text-body-secondary placeholder-glow fw-lighter" id="username">
+        <span class="placeholder w-25"></span>
+      </h5>
+      <p class="placeholder-glow">
+        <span class="placeholder w-100"></span>
+        <span class="placeholder w-100"></span>
+        <span class="placeholder w-100"></span>
+      </p>
+    </div>
+  </div>
+  `;
+};
+
+export const userNotFound = () => {
+  return `
+  <div class="container placeholder d-flex flex-column profile-banner" >
+    <img class="object-fit-cover placeholder rounded-bottom-2" src="" alt="" height="300" loading="lazy" />
+  </div>
+
+  <div class="container profile-container mt-0 pt-0 px-lg-5" style="height: 100vh">
+    <div class="position-relative placeholder profile-avatar">
+      <img class="position-absolute placeholder rounded-pill" src="" alt="avatar" width="100" height="100" />
+    </div>
+    <div class="profile-detail pt-3">
+      <h4 class="p-0 m-0 " id="displayName">
+        <span class="">Pengguna tidak ditemukan</span>
+      </h4>
+      <h5 class="text-body-secondary placeholder-glow fw-lighter" id="username">
+        <span class="placeholder w-25"></span>
+      </h5>
+      <p class="placeholder-glow">
+        <span class="placeholder w-100"></span>
+        <span class="placeholder w-100"></span>
+        <span class="placeholder w-100"></span>
+      </p>
+    </div>
+  </div>
+  `;
 };

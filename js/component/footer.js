@@ -1,7 +1,6 @@
 const footer = document.createElement('footer');
 footer.innerHTML = `
-<footer>
-    <section class="footer-container">
+    <section class="footer-container sticky-bottom">
       <div class="footer-info">
         <div class="footer-gwa">
           <img src="https://ik.imagekit.io/alzirahmana/Asset%20-%20mobile%20responsive%20web/main-logo-small.png?updatedAt=1697183029244" alt="" />
@@ -59,6 +58,5 @@ footer.innerHTML = `
         </div>
       </div>
     </section>
-  </footer>
   `;
 document.body.appendChild(footer);
