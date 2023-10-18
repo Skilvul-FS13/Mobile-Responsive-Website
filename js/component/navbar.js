@@ -190,7 +190,7 @@ const AUTH_KEY = 'isLoggedIn';
 const USER_DATA = 'USER_DATA';
 const auth = localStorage.getItem(AUTH_KEY);
 const dataUser = JSON.parse(localStorage.getItem(USER_DATA));
-console.log('🚀 ~ file: navbar.js:193 ~ dataUser:', dataUser);
+// console.log('🚀 ~ file: navbar.js:193 ~ dataUser:', dataUser);
 const navbarButtonLogin = document.querySelector('.nav-button-login');
 const sidebarButtonLogin = document.querySelector('.login-sidebar');
 const profileIconContainer = document.querySelectorAll('.avatar');
@@ -201,14 +201,14 @@ if (auth) {
 }
 
 function buttonLogOut() {
-  const { avatar } = dataUser;
-  console.log('🚀 ~ file: navbar.js:202 ~ item:', avatar);
-  return `<a class="profile-logout" style="cursor: pointer"><img class="rounded-5 " src='${avatar}' alt="avatar" width="50" height="50" /></a>`;
+  const { ...item } = dataUser;
+  // console.log('🚀 ~ file: navbar.js:202 ~ item:', item);
+  return `<a class="profile-logout" style="cursor: pointer"><img class="rounded-5 " src='${item.avatar}' alt="avatar" width="50" height="50" /></a>`;
 }
 
 // get all profile icon from navbar and sidebar
 const profileIcon = document.querySelectorAll('.profile-logout');
-console.log('🚀 ~ file: navbar.js:209 ~ profileIcon:', profileIcon);
+// console.log('🚀 ~ file: navbar.js:209 ~ profileIcon:', profileIcon);
 
 profileIcon.forEach((icon) => {
   icon.addEventListener('click', () => {
