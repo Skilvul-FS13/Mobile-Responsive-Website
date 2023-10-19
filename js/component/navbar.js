@@ -10,12 +10,8 @@ navbar.innerHTML = `
                 <nav class="navbar">
                     <a class="nav-button" id="home" href="#">Beranda</a>
                     <a class="nav-button" id="aboutus" href="#">Tentang Kami</a>
-                    <a class="nav-button" id="information" href="javascript:void(0);">Informasi
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="14" height="14" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                        </svg>
-                    </a>
-                    <a class="nav-button" id="quiz" href="#">Kuis</a>
+                  
+                 
                     <a class="nav-button" id="community" href="#">Komunitas</a>
                 </nav>
             </div>
@@ -54,12 +50,7 @@ sidebar.innerHTML = `
   <a class="nav-button" id="home" href="#">Beranda</a>
   <a class="nav-button" id="aboutus" href="#">Tentang Kami</a>
   <div class="dropdown-sidebar">
-    <a class="nav-button" id="information" href="javascript:void(0);"
-      >Informasi
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="14" height="14" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-      </svg>
-    </a>
+   
     <div class="dropdown-sidebar-list">
       <a href="javascript:void(0)">Berita</a>
       <a href="javascript:void(0)">Dampak</a>
@@ -68,7 +59,7 @@ sidebar.innerHTML = `
     </div>
   </div>
 
-  <a class="nav-button" id="quiz" href="#">Kuis</a>
+
   <a class="nav-button" id="community" href="#">Komunitas</a>
   <div class="login-sidebar">
     <a href="#" class="btn-primary" id="register">Daftar</a>
