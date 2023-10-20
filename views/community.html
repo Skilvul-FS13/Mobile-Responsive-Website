@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Green World Aware | Komunitas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/community.css" />
+  </head>
+
+  <body class="position-relative">
+    <!-- start navbar -->
+    <header></header>
+    <!-- end of navbar -->
+    <div class="overlay"></div>
+    <!-- start toast notification -->
+    <div aria-live="polite" aria-atomic="true">
+      <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <!-- Then put toasts within -->
+      </div>
+    </div>
+    <!-- end toast notification -->
+    <div class="loading d-flex flex-column align-items-center justify-content-center position-fixed top-50 start-50">
+      <!-- <div class="spinner-border z-3" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <p>Memuat</p> -->
+    </div>
+
+    <!-- start main content -->
+    <main>
+      <!-- start sidebar -->
+      <aside>
+        <div class="sidebar"></div>
+      </aside>
+      <!-- end of start sidebar -->
+      <!-- Modal -->
+      <div id="successLoginModal" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <p>Apakah yakin logout</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary close" data-bs-dismiss="modal">Ya</button>
+              <button type="button" class="btn btn-primary stay" data-bs-dismiss="modal">tidak</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- start community section -->
+      <section class="community d-flex flex-column gap-5">
+        <div class="container d-flex flex-column">
+          <div class="post-user container rounded-2">
+            <div class="form-floating">
+              <textarea class="post-input form-control" placeholder="Buat postingan positif" id="floatingTextarea" maxlength="1000"></textarea>
+              <label id="post-label" for="floatingTextarea">Ceritakan kontribusimu pada lingkungan</label>
+            </div>
+            <hr />
+            <div class="post-button d-flex justify-content-end">
+              <button class="btn-primary" id="post">Post</button>
+            </div>
+          </div>
+        </div>
+
+        <article class="container post-list"></article>
+      </section>
+      <!-- end community section -->
+    </main>
+    <!-- end of main content -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="../js/component/navbar.js"></script>
+    <script src="../js/component/footer.js"></script>
+    <script type="module" src="../js/pages/community.js"></script>
+  </body>
+</html>
