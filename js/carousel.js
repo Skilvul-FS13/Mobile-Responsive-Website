@@ -13,6 +13,7 @@ arrowButton.forEach((button) => {
   });
 });
 
+// automatically scroll
 function scrollToCurrentSponsorIndex() {
   const maxIndex = sponsorList.length + 2;
 
@@ -29,6 +30,7 @@ function scrollToCurrentSponsorIndex() {
   });
 }
 
+// set time for automatic scroll
 setInterval(() => {
   currentIndex++;
   scrollToCurrentSponsorIndex();

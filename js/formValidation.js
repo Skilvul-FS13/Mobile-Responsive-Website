@@ -51,5 +51,3 @@ function submit(e) {
     warning.textContent = '';
   }
 }
-
-console.log(JSON.parse(localStorage.getItem('USER_LOGGED_IN')));

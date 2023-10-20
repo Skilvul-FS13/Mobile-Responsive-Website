@@ -3,12 +3,21 @@
 }
 
 /*=============================================
+=       bootstrap icon custom size            =
+=============================================*/
+
+i {
+  font-size: 1.4rem;
+}
+
+/*=====  End of bootstrap icon custom size  ======*/
+
+/*=============================================
 =            post section                     =
 =============================================*/
 .post-user {
   padding: 20px;
   background: var(--cardbackgroundcolor);
-  border-radius: 12px;
 }
 
 .post-input {
@@ -46,7 +55,6 @@
 .post-box {
   background-color: var(--cardbackgroundcolor);
   padding: 20px;
-  border-radius: 12px;
 }
 
 button[role='button'] {
@@ -55,3 +63,24 @@ button[role='button'] {
 }
 
 /*=====  End of post list section      ======*/
+
+/*=============================================
+=            profile page                     =
+=============================================*/
+
+.profile-avatar img {
+  top: -100px;
+}
+
+/*=====  End of profile page           ======*/
+
+/*=============================================
+=            toast animation                  =
+=============================================*/
+
+.toast-fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/*=====  End of toast animation         ======*/
