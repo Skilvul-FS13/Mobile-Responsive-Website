@@ -148,10 +148,10 @@ window.addEventListener('scroll', () => {
 const navInformation = document.querySelector('#information');
 const dropdown = document.querySelector('.dropdown');
 
-navInformation.addEventListener('click', () => {
-  navInformation.classList.toggle('active');
-  dropdown.classList.toggle('show-dropdown');
-});
+// navInformation.addEventListener('click', () => {
+//   navInformation.classList.toggle('active');
+//   dropdown.classList.toggle('show-dropdown');
+// });
 
 // sidebar mobile
 
@@ -172,9 +172,9 @@ overlay.addEventListener('click', () => {
   overlay.classList.toggle('active');
 });
 
-dropdownSidebar.addEventListener('click', () => {
-  dropdownSidebarList.classList.toggle('active');
-});
+// dropdownSidebar.addEventListener('click', () => {
+//   dropdownSidebarList.classList.toggle('active');
+// });
 
 // navbar dynamic
 const AUTH_KEY = 'isLoggedIn';
