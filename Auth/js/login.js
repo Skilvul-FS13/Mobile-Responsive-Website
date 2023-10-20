@@ -43,11 +43,6 @@ loginFormElement.addEventListener('submit', (event) => {
   }
 
   if (isValid) {
-    // const body = {
-    //   email,
-    //   password,
-    // };
-
     fetch(API_URL)
       .then((response) => {
         if (!response.ok) {
@@ -57,18 +52,15 @@ loginFormElement.addEventListener('submit', (event) => {
       })
       .then((users) => {
         console.log(users);
-        // Simpan data login ke localStorage
+
         const user = users.find((u) => u.email === email && u.password === password);
         console.log('🚀 ~ file: login.js:62 ~ .then ~ user:', user);
 
         if (user) {
-          // destruct object untuk mengambil data user yang diperlukan
           const { username, avatar, firstName, lastName, userId } = user;
           localStorage.setItem(AUTH_KEY, 'true');
           localStorage.setItem(USER_DATA, JSON.stringify({ username, avatar, firstName, lastName, userId }));
-          //   check apakah login sudah berhasil, jika sudah maka redirect ke halaman landing
           showLoginModal();
-          //   checkLoginStatus();
         } else {
           console.log('gagal login');
           alert('kamu gagal login(salah password atau email)');
@@ -80,33 +72,15 @@ loginFormElement.addEventListener('submit', (event) => {
   }
 });
 
-// Fungsi untuk menampilkan login modal
 function showLoginModal() {
   const successModal = document.getElementById('successLoginModal');
   successModal.style.display = 'block';
 
-  // Event listener untuk tombol "Close"
   const closeButton = successModal.querySelector('.btn-secondary');
   closeButton.addEventListener('click', function () {
-    // Alihkan pengguna ke halaman home
     window.location.replace('/');
   });
 }
-
-// function checkLoginStatus() {
-//   const authToken = localStorage.getItem(AUTH_KEY);
-//   const loginButton = document.getElementById('login');
-//   const registerButton = document.getElementById('register');
-//   const userLogo = document.getElementById('userLogo');
-
-//   if (authToken) {
-//     const account = JSON.parse(authToken);
-//     loginButton.style.display = 'none';
-//     registerButton.style.display = 'none';
-//     userLogo.style.display = 'block';
-//     userLogo.textContent = account.email;
-//   }
-// }
 
 function showError(input, errorElement, errorMessage) {
   input.classList.add('is-invalid');

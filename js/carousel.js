@@ -1,4 +1,3 @@
-// sponsored carousel
 const arrowButton = document.querySelectorAll('.carousel #left,#right');
 const sponsored = document.querySelector('.sponsor-list');
 const sponsorList = sponsored.querySelectorAll('.sponsor');
@@ -13,7 +12,6 @@ arrowButton.forEach((button) => {
   });
 });
 
-// automatically scroll
 function scrollToCurrentSponsorIndex() {
   const maxIndex = sponsorList.length + 2;
 
@@ -30,7 +28,6 @@ function scrollToCurrentSponsorIndex() {
   });
 }
 
-// set time for automatic scroll
 setInterval(() => {
   currentIndex++;
   scrollToCurrentSponsorIndex();

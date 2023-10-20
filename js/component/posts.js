@@ -1,17 +1,14 @@
 import { formatDate } from '../utils/context.js';
 
 const showUserPosts = (p) => {
-  // console.log('🚀 ~ file: posts.js:4 ~ showUserPosts ~ p:', p);
   const IS_LOGGED_IN_KEY = 'isLoggedIn';
   const isLoggedIn = localStorage.getItem(IS_LOGGED_IN_KEY);
 
   let likeButtonIcon;
 
-  // if user log in, like button will work
   if (isLoggedIn) {
     likeButtonLogin();
   } else {
-    // if user not log in, like button will not work
     likeButtonIcon = '<i class="bi bi-tree"></i>';
   }
 

@@ -1,4 +1,3 @@
-// navbar active
 const navbar = document.querySelector('header');
 navbar.innerHTML = `
     <div class="navbar-container">
@@ -42,9 +41,8 @@ navbar.innerHTML = `
     </div>
 `;
 
-// sidebar
 const sidebar = document.querySelector('.sidebar');
-// render sidebar
+
 sidebar.innerHTML = `
 <div class="sidebar-link">
   <a class="nav-button" id="home" href="#">Beranda</a>
@@ -67,18 +65,15 @@ sidebar.innerHTML = `
   </div>
 </div>`;
 
-// Ambil elemen-elemen tautan navbar
 const homeLink = document.querySelectorAll('#home');
 const aboutUsLink = document.querySelectorAll('#aboutus');
 const informationLink = document.querySelectorAll('information');
-// const quizLink = document.querySelectorAll('quiz');
+
 const communityLink = document.querySelectorAll('#community');
 
-// Ambil elemen-elemen tombol login dan register
 const loginButton = document.querySelectorAll('#login');
 const registerButton = document.querySelectorAll('#register');
 
-// Tambahkan event listener untuk mengarahkan ke halaman yang sesuai
 homeLink.forEach((btn) => {
   btn.addEventListener('click', function () {
     window.location.href = '/';
@@ -90,15 +85,6 @@ aboutUsLink.forEach((btn) => {
     window.location.href = '/views/aboutus.html';
   });
 });
-
-// informationLink.addEventListener("click", function () {
-
-//   alert("Tautan Informasi diklik");
-// });
-
-// quizLink.addEventListener('click', function () {
-//   window.location.href = '/quiz.html';
-// });
 
 communityLink.forEach((btn) => {
   btn.addEventListener('click', function () {
@@ -119,7 +105,6 @@ registerButton.forEach((btn) => {
 
 const locatePage = window.location.href;
 
-// get active button for navbar
 switch (locatePage) {
   case 'http://127.0.0.1:5501/':
     homeLink.forEach((btn) => btn.classList.add('active'));
@@ -134,7 +119,6 @@ switch (locatePage) {
     break;
 }
 
-// navbar shadow
 const navbarContainer = document.querySelector('.navbar-container');
 window.addEventListener('scroll', () => {
   if (window.scrollY > 0) {
@@ -144,16 +128,8 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// show dropdown
 const navInformation = document.querySelector('#information');
 const dropdown = document.querySelector('.dropdown');
-
-// navInformation.addEventListener('click', () => {
-//   navInformation.classList.toggle('active');
-//   dropdown.classList.toggle('show-dropdown');
-// });
-
-// sidebar mobile
 
 const burgerButton = document.querySelector('.nav-burger');
 const overlay = document.querySelector('.overlay');
@@ -172,16 +148,10 @@ overlay.addEventListener('click', () => {
   overlay.classList.toggle('active');
 });
 
-// dropdownSidebar.addEventListener('click', () => {
-//   dropdownSidebarList.classList.toggle('active');
-// });
-
-// navbar dynamic
 const AUTH_KEY = 'isLoggedIn';
 const USER_DATA = 'USER_DATA';
 const auth = localStorage.getItem(AUTH_KEY);
 const dataUser = JSON.parse(localStorage.getItem(USER_DATA));
-// console.log('🚀 ~ file: navbar.js:193 ~ dataUser:', dataUser);
 const navbarButtonLogin = document.querySelector('.nav-button-login');
 const sidebarButtonLogin = document.querySelector('.login-sidebar');
 const profileIconContainer = document.querySelectorAll('.avatar');
@@ -193,28 +163,23 @@ if (auth) {
 
 function buttonLogOut() {
   const { ...item } = dataUser;
-  // console.log('🚀 ~ file: navbar.js:202 ~ item:', item);
   return `<a class="profile-logout" style="cursor: pointer"><img class="rounded-5 " src='${item.avatar}' alt="avatar" width="50" height="50" /></a>`;
 }
 
-// get all profile icon from navbar and sidebar
 const profileIcon = document.querySelectorAll('.profile-logout');
-// console.log('🚀 ~ file: navbar.js:209 ~ profileIcon:', profileIcon);
 
 profileIcon.forEach((icon) => {
   icon.addEventListener('click', () => {
     showLoginModal();
   });
 });
-// Fungsi untuk menampilkan login modal
+
 function showLoginModal() {
   const successModal = document.getElementById('successLoginModal');
   successModal.style.display = 'block';
 
-  // Event listener untuk tombol "Close"
   const closeButton = successModal.querySelector('.close');
   closeButton.addEventListener('click', function () {
-    // Alihkan pengguna ke halaman home
     localStorage.removeItem(AUTH_KEY);
     localStorage.removeItem(USER_DATA);
     window.location.replace('/');
@@ -225,14 +190,3 @@ function showLoginModal() {
     successModal.style.display = 'none';
   });
 }
-// const setLogOut = document.querySelectorAll('#logout');
-
-// if (setLogOut) {
-//   setLogOut.forEach((btn) => {
-//     btn.addEventListener('click', () => {
-//       localStorage.removeItem('isLoggedIn');
-//       localStorage.removeItem('USER_LOGGED_IN');
-//       window.location.replace('/');
-//     });
-//   });
-// }

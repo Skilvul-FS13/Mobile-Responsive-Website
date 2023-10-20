@@ -105,15 +105,12 @@ loginFormElement.addEventListener('submit', (event) => {
   }
 });
 
-// fungsi showLoginModal
 function showRegisterModal() {
   const successModal = document.getElementById('successRegisterModal');
   successModal.style.display = 'block';
 
-  // Event listener untuk tombol "Login"
   const loginButton = successModal.querySelector('.btn-primary');
   loginButton.addEventListener('click', function () {
-    // Alihkan pengguna ke halaman home
     window.location.href = '../Auth/login.html';
   });
 }
